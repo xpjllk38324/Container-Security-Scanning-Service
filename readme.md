@@ -1,9 +1,7 @@
 # Container Security Scanning Service
 
-## Team Composition
+## Overview
 - **Members:** 3-4
-
-## Project Overview
 - **Complexity:** Complex
 - **Size:** Medium
 
@@ -14,4 +12,3 @@ This project aims to:
 - Model the security threats resulting from the automated deployment process.
 - Develop a container vulnerability scanning service that is integrated into the CI/CD pipeline of the framework and its container registry.
 - Provide reporting on the results for both developers and administrators.
-
