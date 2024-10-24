@@ -1,0 +1,161 @@
+digraph DDD_Class_Model {
+  node [shape=plaintext];
+
+
+  VulnerabilityDatabase [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«entity» VulnerabilityDatabase</b></td></tr>
+      <tr><td align="left">- id: UUID<br align="left"/>- name: String<br align="left"/>- dateUpdated: Date<br align="left"/>- entries: List&lt;VulnerabilityRecord&gt;</td></tr>
+      <tr><td border="1" align="left">+ addEntry()<br align="left"/>+ deleteEntry()<br align="left"/>+ updateEntry()<br align="left"/>+ getId(): UUID<br align="left"/>+ getName(): String<br align="left"/>+ getDateUpdated(): Date<br align="left"/>+ getEntries(): List&lt;VulnerabilityRecord&gt;<br align="left"/>+ setName(name: String)<br align="left"/>+ setDateUpdated(date: Date)</td></tr>
+    </table>>];
+
+  // Value Object: VulnerabilityRecord
+  VulnerabilityRecord [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«value object» VulnerabilityRecord</b></td></tr>
+      <tr><td align="left">- id: UUID<br align="left"/>- severity: Severity<br align="left"/>- description: String<br align="left"/>- fixAvailable: Boolean</td></tr>
+      <tr><td border="1" align="left">+ getId(): UUID<br align="left"/>+ getSeverity(): Severity<br align="left"/>+ getDescription(): String<br align="left"/>+ isFixAvailable(): Boolean<br align="left"/>+ setSeverity(severity: Severity)<br align="left"/>+ setDescription(description: String)<br align="left"/>+ setFixAvailable(fixAvailable: Boolean)</td></tr>
+    </table>>];
+
+
+  Container [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«aggregate root» Container</b></td></tr>
+      <tr><td align="left">- id: UUID<br align="left"/>- name: String<br align="left"/>- status: Status<br align="left"/>- image: String</td></tr>
+      <tr><td border="1" align="left">+ access()<br align="left"/>+ scan()<br align="left"/>+ getId(): UUID<br align="left"/>+ getName(): String<br align="left"/>+ getStatus(): Status<br align="left"/>+ getImage(): String<br align="left"/>+ setName(name: String)<br align="left"/>+ setStatus(status: Status)<br align="left"/>+ setImage(image: String)</td></tr>
+    </table>>];
+
+
+  ContainerScanRule [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«value object» ContainerScanRule</b></td></tr>
+      <tr><td align="left">- ruleId: UUID<br align="left"/>- severityThreshold: Severity<br align="left"/>- scanFrequency: Frequency</td></tr>
+      <tr><td border="1" align="left">+ evaluate()<br align="left"/>+ revise()<br align="left"/>+ getRuleId(): UUID<br align="left"/>+ getSeverityThreshold(): Severity<br align="left"/>+ getScanFrequency(): Frequency<br align="left"/>+ setSeverityThreshold(severity: Severity)<br align="left"/>+ setScanFrequency(frequency: Frequency)</td></tr>
+    </table>>];
+
+
+  ScanTask [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«entity» ScanTask</b></td></tr>
+      <tr><td align="left">- taskId: UUID<br align="left"/>- container: Container<br align="left"/>- startTime: DateTime<br align="left"/>- result: ScanResult<br align="left"/>- status: ScanStatus</td></tr>
+      <tr><td border="1" align="left">+ execute()<br align="left"/>+ generateReport()<br align="left"/>+ getTaskId(): UUID<br align="left"/>+ getContainer(): Container<br align="left"/>+ getStartTime(): DateTime<br align="left"/>+ getResult(): ScanResult<br align="left"/>+ setContainer(container: Container)<br align="left"/>+ setResult(result: ScanResult)<br align="left"/>+ setStatus(status: ScanStatus)</td></tr>
+    </table>>];
+
+
+  ScanStatus [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«enum» ScanStatus</b></td></tr>
+      <tr><td align="left">+ PENDING: ScanStatus<br align="left"/>+ IN_PROGRESS: ScanStatus<br align="left"/>+ COMPLETED: ScanStatus<br align="left"/>+ FAILED: ScanStatus</td></tr>
+    </table>>];
+
+  // Value Object: ScanResult
+  ScanResult [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«value object» ScanResult</b></td></tr>
+      <tr><td align="left">- vulnerabilitiesFound: List&lt;VulnerabilityRecord&gt;<br align="left"/>- severity: Severity<br align="left"/>- summary: String</td></tr>
+      <tr><td border="1" align="left">+ analyze()<br align="left"/>+ getVulnerabilitiesFound(): List&lt;VulnerabilityRecord&gt;<br align="left"/>+ getSeverity(): Severity<br align="left"/>+ getSummary(): String<br align="left"/>+ setSeverity(severity: Severity)<br align="left"/>+ setSummary(summary: String)</td></tr>
+    </table>>];
+
+
+  AssessmentRule [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«entity» AssessmentRule</b></td></tr>
+      <tr><td align="left">- ruleId: UUID<br align="left"/>- criteria: String<br align="left"/>- severityLimit: Severity</td></tr>
+      <tr><td border="1" align="left">+ evaluateContainer()<br align="left"/>+ reviseRule()<br align="left"/>+ getRuleId(): UUID<br align="left"/>+ getCriteria(): String<br align="left"/>+ getSeverityLimit(): Severity<br align="left"/>+ setCriteria(criteria: String)<br align="left"/>+ setSeverityLimit(severity: Severity)</td></tr>
+    </table>>];
+
+
+  ScanningService [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«service» ScanningService</b></td></tr>
+      <tr><td align="left">+ scan(container: Container)<br align="left"/>+ scheduleScan(rule: ContainerScanRule)<br align="left"/>+ generateReport(task: ScanTask)</td></tr>
+    </table>>];
+
+
+  AlertService [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«service» AlertService</b></td></tr>
+      <tr><td align="left">+ notify(engineer: Person, message: String)<br align="left"/>+ triggerAlert(vulnerability: VulnerabilityRecord)<br align="left"/>+ sendCriticalAlert(severity: Severity)</td></tr>
+    </table>>];
+
+
+  AuditLog [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«entity» AuditLog</b></td></tr>
+      <tr><td align="left">- logId: UUID<br align="left"/>- eventType: String<br align="left"/>- timestamp: DateTime<br align="left"/>- details: String</td></tr>
+      <tr><td border="1" align="left">+ createLog()<br align="left"/>+ getLogs()</td></tr>
+    </table>>];
+
+
+  VulnerabilityDatabaseRepository [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«repository» VulnerabilityDatabaseRepository</b></td></tr>
+      <tr><td align="left">+ findById(id: UUID)<br align="left"/>+ save(database: VulnerabilityDatabase)<br align="left"/>+ delete(id: UUID)</td></tr>
+    </table>>];
+
+
+  ContainerRuleRepository [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«repository» ContainerRuleRepository</b></td></tr>
+      <tr><td align="left">+ findById(id: UUID)<br align="left"/>+ save(rule: ContainerScanRule)<br align="left"/>+ delete(id: UUID)</td></tr>
+    </table>>];
+
+  // Abstract Class: Person
+  Person [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«abstract entity» Person</b></td></tr>
+      <tr><td align="left">+ id: UUID<br align="left"/>+ name: String<br align="left"/>+ email: String</td></tr>
+      <tr><td border="1" align="left">+ notify()<br align="left"/>+ getId(): UUID<br align="left"/>+ getName(): String<br align="left"/>+ getEmail(): String<br align="left"/>+ setName(name: String)<br align="left"/>+ setEmail(email: String)</td></tr>
+    </table>>];
+
+  // Subclass: InformationSecurityEngineer
+  InformationSecurityEngineer [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«entity» InformationSecurityEngineer</b></td></tr>
+      <tr><td align="left">+ configureVulnerabilityDatabase()<br align="left"/>+ manageScanRules()</td></tr>
+    </table>>];
+
+  // Subclass: DevOpsEngineer
+  DevOpsEngineer [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«entity» DevOpsEngineer</b></td></tr>
+      <tr><td align="left">+ manageDeployment()<br align="left"/>+ performContainerScan()<br align="left"/>+ setAlerts()</td></tr>
+    </table>>];
+
+
+  Developer [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«entity» Developer</b></td></tr>
+      <tr><td align="left">+ fixVulnerability()<br align="left"/>+ reviewScanReport()</td></tr>
+    </table>>];
+
+
+  Severity [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«enum» Severity</b></td></tr>
+      <tr><td align="left">+ LOW: Severity<br align="left"/>+ MEDIUM: Severity<br align="left"/>+ HIGH: Severity<br align="left"/>+ CRITICAL: Severity</td></tr>
+    </table>>];
+
+
+  VulnerabilityDatabase -> VulnerabilityRecord [label="1..* contains" arrowtail=odiamond];
+  ScanResult -> VulnerabilityRecord [label="1..* aggregates" arrowtail=odiamond];
+  Container -> ContainerScanRule [label="1..* applies" arrowtail=odiamond];
+  ScanTask -> ScanResult [label="1..1 has"];
+  ScanningService -> Container [label="1..1 handles"];
+  ScanningService -> ScanTask [label="1..1 initiates"];
+  ScanningService -> ContainerScanRule [label="1..1 references"];
+  AlertService -> VulnerabilityRecord [label="1..1 triggers"];
+  AlertService -> Person [label="0..* notifies"];
+  AlertService -> Severity [label="1..* criticality"];
+  VulnerabilityDatabaseRepository -> VulnerabilityDatabase [label="1..1 stores"];
+  ContainerRuleRepository -> ContainerScanRule [label="1..1 manages"];
+  Person -> InformationSecurityEngineer [label="0..1 role"];
+  Person -> DevOpsEngineer [label="0..1 role"];
+  Person -> Developer [label="0..1 role"];
+  
+
+  AuditLog -> VulnerabilityDatabase [label="1..* logs"];
+  ScanningService -> VulnerabilityDatabaseRepository [style=dashed];
+  AlertService -> AuditLog [label="1..* logs"];
+}
+
