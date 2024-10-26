@@ -13,8 +13,18 @@ Pujun Xie
 Adam Terlo
 Syed Ali
 
-## Contents
-...
+## Table of Contents
+
+- [Behavior Diagram](#behavior-diagram)
+- [Class Model](#class-model)
+- [Interaction Analysis](#interaction-analysis)
+- [Practices](#practices)
+- [Product Definition](#product-definition)
+- [Product Scope](#product-scope)
+- [StoryMap](#storymap)
+- [Use Cases](#use-cases)
+- [Images](#images)
+
 
 ## Overview
 - **Members:** 3-4
