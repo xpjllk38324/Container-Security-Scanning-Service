@@ -10,7 +10,9 @@ The GitOps process implemented by the framework implies that user code is deploy
 
 ## Members of "Data Visioners" Team
 Pujun Xie
+
 Adam Terlo
+
 Syed Ali
 
 ## Table of Contents
