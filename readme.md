@@ -15,8 +15,8 @@ Syed Ali
 
 ## Table of Contents
 
-- [Behavior Diagram](#behavior-diagram)
-- [Class Model](#class-model)
+- [Behavior Diagram](/behavior-diagram)
+- [Class Model](/class-model)
 - [Interaction Analysis](#interaction-analysis)
 - [Practices](#practices)
 - [Product Definition](#product-definition)
