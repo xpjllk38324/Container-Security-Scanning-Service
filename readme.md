@@ -9,11 +9,11 @@ This project is a part of the Advanced Software Design course at Higher School o
 The GitOps process implemented by the framework implies that user code is deployed to and run on the k8s cluster without any manual checking by the framework administrators. The project aims at modeling the security threats resulting from such an approach, developing a container vulnerability scanning service integrated into the CI/CD pipeline of the framework and its container registry, and reporting on the results for both developers and administrators.
 
 ## Members of "Data Visioners" Team
-Pujun Xie, <img src="https://raw.githubusercontent.com/CLorant/readme-social-icons/refs/heads/main/small/filled/github.svg">: @xpjllk38324
+Pujun Xie, <img src="https://raw.githubusercontent.com/CLorant/readme-social-icons/refs/heads/main/small/filled/github.svg"> <a href="https://github.com/xpjllk38324">@xpjllk38324</a>, <img src="https://raw.githubusercontent.com/CLorant/readme-social-icons/refs/heads/main/small/filled/telegram.svg"> <a href="https://t.me/@pujunxie">@pujunxie
 
-Adam Terlo, GH/TG: @adamrvn
+Adam Terlo, GH/TG: <img src="https://raw.githubusercontent.com/CLorant/readme-social-icons/refs/heads/main/small/filled/github.svg">/<img src="https://raw.githubusercontent.com/CLorant/readme-social-icons/refs/heads/main/small/filled/telegram.svg"> <a href="https://t.me/@adamrvn">@adamrvn
 
-Syed Ali, GH: @Taqiali5, TG: @syedali555
+Syed Ali, <img src="https://raw.githubusercontent.com/CLorant/readme-social-icons/refs/heads/main/small/filled/github.svg"> <a href="https://github.com/Taqiali5">@Taqiali5</a>, <img src="https://raw.githubusercontent.com/CLorant/readme-social-icons/refs/heads/main/small/filled/telegram.svg"> <a href="https://t.me/@syedali555">@syedali555 
 
 ## Table of Contents
 
