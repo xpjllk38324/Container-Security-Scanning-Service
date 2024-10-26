@@ -5,5 +5,7 @@
 ## Details
 
 Source of the diagram: <a href="./Class Model.gv">Class Model.gv</a>
+
 Author: Adam Terlo
+
 Reviewed by Data Visioners Team
