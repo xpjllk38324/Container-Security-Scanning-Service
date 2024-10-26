@@ -15,15 +15,16 @@ Syed Ali
 
 ## Table of Contents
 
-- [Behavior Diagram](/behavior-diagram)
-- [Class Model](/class-model)
-- [Interaction Analysis](#interaction-analysis)
-- [Practices](#practices)
-- [Product Definition](#product-definition)
-- [Product Scope](#product-scope)
-- [StoryMap](#storymap)
-- [Use Cases](#use-cases)
-- [Images](#images)
+- [Behavior Diagram](/Behavior%20Diagram)
+- [Class Model](/Class%20Model)
+- [Interaction Analysis](/Interaction%20Analysis)
+- [Practices](/Practices)
+- [Product Definition](/Product%20Definition)
+- [Product Scope](/Product%20Scope)
+- [StoryMap](/StoryMap)
+- [Use Cases](/Use%20Cases)
+
+
 
 
 ## Overview
