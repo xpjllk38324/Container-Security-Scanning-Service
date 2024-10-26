@@ -1,5 +1,7 @@
 <img src="./Use Cases Diagram.svg">
+
 # Use Cases 
+
 <sup> 🔍 Click on the image to view it in the larger resultion </sup>
 
 ## Details
