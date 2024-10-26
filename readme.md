@@ -30,7 +30,7 @@ Syed Ali, <img src="https://raw.githubusercontent.com/CLorant/readme-social-icon
 - [StoryMap](/StoryMap)
 - [Use Cases](/Use%20Cases)
 - [First Module Presentation](#first-model-presentation)
-
+- [Bibliography](#bibliography)
 
 ## Overview
 - **Members:** 3-4
@@ -106,3 +106,8 @@ This project aims to:
 
 ## ✅ First Module Presentation
 <a href="https://docs.google.com/presentation/d/1jYT2z8IW7d-pIBxl-vZMGDVw9JMwZKOG/edit?usp=sharing&ouid=114089356352736591781&rtpof=true&sd=true"> Presentation </a>
+
+## Bibliography
+- Shankar, P., & Shankar, P. (2023, April 19). 12 Container image scanning best practices to adopt in production. Sysdig. https://sysdig.com/blog/image-scanning-best-practices/
+- Expert, G. (2024, June 27). Container Security Scanning: vulnerabilities, risks and tooling. GitGuardian Blog - Code Security for the DevOps Generation. https://blog.gitguardian.com/container-security-scanning-vulnerabilities-risks-and-tooling/
+
