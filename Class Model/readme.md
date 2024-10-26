@@ -1,7 +1,5 @@
-<img src="./Class Model.svg">
-
 # Class Model
-
+<img src="./Class Model.svg">
 <sup> 🔍 Click on the image to view it in the larger resultion </sup>
 
 ## Details
