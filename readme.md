@@ -110,4 +110,5 @@ This project aims to:
 ## Bibliography
 - Shankar, P., & Shankar, P. (2023, April 19). 12 Container image scanning best practices to adopt in production. Sysdig. https://sysdig.com/blog/image-scanning-best-practices/
 - Expert, G. (2024, June 27). Container Security Scanning: vulnerabilities, risks and tooling. GitGuardian Blog - Code Security for the DevOps Generation. https://blog.gitguardian.com/container-security-scanning-vulnerabilities-risks-and-tooling/
+- Kubernetes documentation. (n.d.). Kubernetes. https://kubernetes.io/docs/home/
 
