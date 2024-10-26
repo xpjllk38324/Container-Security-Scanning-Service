@@ -20,6 +20,7 @@ Syed Ali, <img src="https://raw.githubusercontent.com/CLorant/readme-social-icon
 - [Overview](#overview)
 - [Objectives](#objectives)
 - [Feature List](#feature-list)
+- [Personas](#personas)
 - [Constraints](#constraints)
 - [Behavior Diagram](/Behavior%20Diagram)
 - [Class Model](/Class%20Model)
@@ -57,6 +58,12 @@ This project aims to:
 1. Container scan engine needs to quickly and accurately identify security vulnerabilities and bad practices in containers.
 2. Container scanning service needs to be integrated with existing CI/CD systems, which requires services with flexible architectures capable of supporting multiple integration approaches.
 3. Container scanning service needs to ensure the security and privacy of user data. The service needs to take appropriate encryption measures to protect sensitive information during data transmission and storage.
+
+### Personas
+
+- Developers
+- DevOps Engineers
+- Information Security Engineers
 
 
 ## Directory layout
