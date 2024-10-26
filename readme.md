@@ -9,7 +9,9 @@ This project is a part of the Advanced Software Design course at Higher School o
 The GitOps process implemented by the framework implies that user code is deployed to and run on the k8s cluster without any manual checking by the framework administrators. The project aims at modeling the security threats resulting from such an approach, developing a container vulnerability scanning service integrated into the CI/CD pipeline of the framework and its container registry, and reporting on the results for both developers and administrators.
 
 ## Members of "Data Visioners" Team
-Pujun Xie, Adam Terlo, Syed Ali
+Pujun Xie
+Adam Terlo
+Syed Ali
 
 ## Contents
 ...
@@ -43,7 +45,47 @@ This project aims to:
 
 ## Directory layout
 
-    .
-    ├── data 
-    └── README.md
+```
+.
+├── Behavior Diagram
+│		 ├── Behavior Diagram Developer.svg
+│		 ├── Behavior Diagram Developer.xml
+│		 └── readme.md
+├── Class Model
+│		 ├── Class Model.gv
+│		 ├── Class Model.png
+│		 ├── Class Model.svg
+│		 └── readme.md
+├── Interaction analysis
+│		 ├── Interaction Analysis.png
+│		 └── readme.md
+├── Practices
+│		 ├── Task4 Images
+│		 │		 └── ... .svg
+│		 ├── Task4.docx
+│		 ├── Task4.pdf
+│		 └── readme.md
+├── Product Definition
+│		 ├── Product Definition.pdf
+│		 ├── Product Definition.pptx
+│		 └── readme.md
+├── Product Scope
+│		 ├── Product Scope.pdf
+│		 └── readme.md
+├── StoryMap
+│		 ├── StoryMap.svg
+│		 ├── StoryMap.xml
+│		 └── readme.md
+├── Use Cases
+│		 ├── Use Cases Diagram.svg
+│		 ├── Use Cases Diagram.xml
+│		 ├── Use Cases Report.pdf
+│		 └── readme.md
+├── readme.md
+└── Ιmages
+    └── header.png
 
+```
+
+## ✅ First Module Presentation
+<a href="https://docs.google.com/presentation/d/1jYT2z8IW7d-pIBxl-vZMGDVw9JMwZKOG/edit?usp=sharing&ouid=114089356352736591781&rtpof=true&sd=true"> Presentation </a>
