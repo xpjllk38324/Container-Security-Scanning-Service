@@ -11,9 +11,8 @@
 ### 1. Configure Container Scanning Rule
 #### 1.1 Use case name: Add container scanning rule
 **Use case number:** 001
-
-
-
+  
+  
 **Actor:** DevOps Engineer, Information Security Engineer, Developer
 
 **Use case description:** This use case describes the behavior of an actor adding a new container scanning rule.
