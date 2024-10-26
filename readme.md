@@ -1,5 +1,5 @@
 <div align="center"> <img src="images/header.png"> </div>
-<sup> Expert, G. (2024, June 27). Container Security Scanning: vulnerabilities, risks and tooling. GitGuardian Blog - Code Security for the DevOps Generation. https://blog.gitguardian.com/container-security-scanning-vulnerabilities-risks-and-tooling/ </small>
+<sup>Image based on: Expert, G. (2024, June 27). Container Security Scanning: vulnerabilities, risks and tooling. GitGuardian Blog - Code Security for the DevOps Generation. https://blog.gitguardian.com/container-security-scanning-vulnerabilities-risks-and-tooling/ </sup>
 
 # Container Security Scanning Service
 This project is a part of the Advanced Software Design course at Higher School of Economics.  
