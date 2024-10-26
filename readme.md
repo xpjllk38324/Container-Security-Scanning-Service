@@ -1,5 +1,6 @@
 <div align="center"> <img src="Ιmages/header.png"> </div>
 </br>
+
 <sup>Image based on: Expert, G. (2024, June 27). Container Security Scanning: vulnerabilities, risks and tooling. GitGuardian Blog - Code Security for the DevOps Generation. https://blog.gitguardian.com/container-security-scanning-vulnerabilities-risks-and-tooling/ </sup>
 
 # Container Security Scanning Service
