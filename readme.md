@@ -6,7 +6,7 @@
 This project is a part of the Advanced Software Design course at Higher School of Economics.  
 
 ## Project Description
-The GitOps process implemented by the framework implies that user code is deployed to and run on the <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=kubernetes" style="height:1.25rem"></a> k8s cluster without any manual checking by the framework administrators. The project aims at modeling the security threats resulting from such an approach, developing a container vulnerability scanning service integrated into the CI/CD pipeline of the framework and its container registry, and reporting on the results for both developers and administrators.
+The GitOps process implemented by the framework implies that user code is deployed to and run on the <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=kubernetes" style="height:1.05rem"></a> k8s cluster without any manual checking by the framework administrators. The project aims at modeling the security threats resulting from such an approach, developing a container vulnerability scanning service integrated into the CI/CD pipeline of the framework and its container registry, and reporting on the results for both developers and administrators.
 
 ## Members of "Data Visioners" Team
 Pujun Xie, <img src="https://raw.githubusercontent.com/CLorant/readme-social-icons/refs/heads/main/small/filled/github.svg"> <a href="https://github.com/xpjllk38324">@xpjllk38324</a> <img src="https://raw.githubusercontent.com/CLorant/readme-social-icons/refs/heads/main/small/filled/telegram.svg"> <a href="https://t.me/@pujunxie">@pujunxie
