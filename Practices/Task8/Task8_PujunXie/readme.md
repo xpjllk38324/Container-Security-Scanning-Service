@@ -53,7 +53,7 @@ python3 8Q.py
 
 ## The compare of the solution
 
-| Method | Key Word in Context | Eight Queens |
+| | Key Word in Context | Eight Queens |
 | :---         |     :---:      |          ---: |
 |Abstract Data Types | git status | git status |
 | Main/Subroutine with stepwise refinement (also Shared Data) | git diff | git diff |
