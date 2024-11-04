@@ -53,16 +53,16 @@ python3 8Q.py
 
 ## The compare of the solution
 
-| Key Word in Context | a | b | c | d | d | e |
-| :--- | :---: | :---: |:---: |:---: |:---: |---: |
-|Abstract Data Types | a | b | c | d | d | e |
-| Main/Subroutine with stepwise refinement (also Shared Data) | a | b | c | d | d | e |
-| Pipes-and-filters | a | b | c | d | d | e |
-| Implicit invocation (event-driven) | a | b | c | d | d | e |
+| Key Word in Context | change the implementation algorithm | change data representation | add additional functions | performance | Reusability |
+| :--- | :---: | :---: |:---: |:---: |---: |
+|Abstract Data Types | a | b | c | d | e |
+| Main/Subroutine with stepwise refinement (also Shared Data) | a | b | c | d |  e |
+| Pipes-and-filters | a | b | c | d | e |
+| Implicit invocation (event-driven) | a | b | c | d | e |
 
-| Eight Queens | a | b | c | d | d | e |
-| :--- | :---: | :---: |:---: |:---: |:---: |---: |
-|Abstract Data Types | a | b | c | d | d | e |
-| Main/Subroutine with stepwise refinement (also Shared Data) | a | b | c | d | d | e |
-| Pipes-and-filters | a | b | c | d | d | e |
-| Implicit invocation (event-driven) | a | b | c | d | d | e |
+| Eight Queens | change the implementation algorithm | change data representation | add additional functions | performance | Reusability |
+| :--- | :---: | :---: |:---: |:---: |---: |
+|Abstract Data Types | a | b | c | d | e |
+| Main/Subroutine with stepwise refinement (also Shared Data) | a | b | c | d |  e |
+| Pipes-and-filters | a | b | c | d | e |
+| Implicit invocation (event-driven) | a | b | c | d | e |
