@@ -3,6 +3,7 @@ by Pujun Xie
 
 ## Project Structure
 
+```
 .
 ├── Task8_PujunXie
 │   ├── 8Q.py
@@ -19,6 +20,7 @@ by Pujun Xie
 │   │   └── KWIC.svg
 │   └── readme.md
 └── readme.md
+```
     
 ## Problem A: Key Word in Context (KWIC)
 In this problem, I use Method 3: Pipes-and-filters. 
