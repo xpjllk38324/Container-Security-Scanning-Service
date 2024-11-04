@@ -41,9 +41,18 @@ def Output_(file_path):
     with open(file_path, 'w') as f:
       for i,j in enumerate(data):
         if i != (len(data)-1):
-          f.write(str(j) + '\n')
+          for number_j,str_j in enumerate(j):
+             if number_j != (len(j)-1):
+                f.write(str_j + ' ')
+             else:
+                f.write(str_j)
+          f.write('\n')
         else:
-          f.write(str(j))
+          for number_j,str_j in enumerate(j):
+             if number_j != (len(j)-1):
+                f.write(str_j + ' ')
+             else:
+                f.write(str_j)
       f.close()
 
   except IOError:
