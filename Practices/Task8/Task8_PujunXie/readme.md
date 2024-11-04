@@ -6,13 +6,17 @@ In this problem, I use Method 3: Pipes-and-filters. The software architecture di
 
 ![image](https://github.com/xpjllk38324/Container-Security-Scanning-Service/blob/main/Practices/Task8/Task8_PujunXie/figure/KWIC.svg)
 
-The code of problem a is in [KWIC](KWIC.py)
+The code of problem a is in [Key Word in Context](KWIC.py). This code use
+
+The Running example is below: We use the [KWIC orignal text](Orignal_KWIC.txt) as input and get [KWIC result text](Orignal_KWIC.txt) as output.
+
+![image](https://github.com/xpjllk38324/Container-Security-Scanning-Service/blob/main/Practices/Task8/Task8_PujunXie/figure/KWIC.png)
 
 ## Problem B: Eight Queens (8Q)
 In this problem, I use the Method 2: Main/Subroutine with stepwise refinement (also Shared Data). The software architecture diagram is below:
 
 ![image](https://github.com/xpjllk38324/Container-Security-Scanning-Service/blob/main/Practices/Task8/Task8_PujunXie/figure/8Q.svg)
 
-The code of problem a is in [KWIC](KWIC.py)
+The code of problem a is in [Eight Queens](8Q.py). This code use 
 
 ## The compare of the solution
