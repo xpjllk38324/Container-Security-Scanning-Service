@@ -2,21 +2,22 @@
 by Pujun Xie
 
 ## Project Structure
-
-└── Task8_PujunXie
-    ├── 8Q.py
-    ├── KWIC.py
-    ├── Orignal_KWIC.txt
-    ├── Result_8Q.txt
-    ├── Result_KWIC.txt
-    ├── figure
-    │   ├── 8Q.drawio
-    │   ├── 8Q.png
-    │   ├── 8Q.svg
-    │   ├── KWIC.drawio
-    │   ├── KWIC.png
-    │   └── KWIC.svg
-    └── readme.md
+.
+├── Task8_PujunXie
+│   ├── 8Q.py
+│   ├── KWIC.py
+│   ├── Orignal_KWIC.txt
+│   ├── Result_8Q.txt
+│   ├── Result_KWIC.txt
+│   ├── figure
+│   │   ├── 8Q.drawio
+│   │   ├── 8Q.png
+│   │   ├── 8Q.svg
+│   │   ├── KWIC.drawio
+│   │   ├── KWIC.png
+│   │   └── KWIC.svg
+│   └── readme.md
+└── readme.md
     
 ## Problem A: Key Word in Context (KWIC)
 In this problem, I use Method 3: Pipes-and-filters. 
