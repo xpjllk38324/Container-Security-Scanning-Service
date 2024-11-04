@@ -22,9 +22,9 @@ You need to enter the filepath of input file and output file in main fuction. Th
 2. Write the input file.
 3. Run the code with the following command:
 
-'''
+```
 Python3 KWIC.py
-'''
+```
 
 ## Problem B: Eight Queens (8Q)
 In this problem, I use the Method 2: Main/Subroutine with stepwise refinement (also Shared Data). 
