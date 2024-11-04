@@ -73,14 +73,14 @@ python3 8Q.py
 
 ## The compare of the solution
 
-| Key Word in Context | change the implementation algorithm | change data representation | add additional functions | performance | Reusability |
+| Key Word in Context | Change the implementation algorithm | Change data representation | Add additional functions | Performance | Reusability |
 | :--- | :---: | :---: |:---: |:---: |---: |
 | Abstract Data Types | Not suitable to change the implementation algorithm. | Possible to change data representation. | Not suitable for adding additional functions. | Better performance. | Supports reuse. |
 | Main/Subroutine with stepwise refinement (also Shared Data) | Possible to change the implementation algorithm. | Not suitable to change data representation. | Possible to add additional functions. | Better performance. |  Poor reusability. |
 | Pipes-and-filters | Possible to change the implementation algorithm. | Not suitable to change data representation. | Possible to add additional functions, becuause it is easy to add filters to the pipe.  | Data transfer between filters with performance losses. | Supports reuse，each filter can run independently. |
 | Implicit invocation (event-driven) | Possible to change the implementation algorithm.| Not suitable to change data representation. | Possible to add additional functions. | Better performance. | Supports reuse. |
 
-| Eight Queens | change the implementation algorithm | change data representation | add additional functions | performance | Reusability |
+| Eight Queens | Change the implementation algorithm | Change data representation | Add additional functions | Performance | Reusability |
 | :--- | :---: | :---: |:---: |:---: |---: |
 | Abstract Data Types | Not suitable to change the implementation algorithm. | Possible to change data representation. | Not suitable for adding additional functions. | Better performance. | Supports reuse. |
 | Main/Subroutine with stepwise refinement (also Shared Data) | Possible to change the implementation algorithm. | Not suitable to change data representation. | Possible to add additional functions. | Better performance. |  Poor reusability. |
