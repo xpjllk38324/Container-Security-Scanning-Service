@@ -75,10 +75,10 @@ python3 8Q.py
 
 | Key Word in Context | change the implementation algorithm | change data representation | add additional functions | performance | Reusability |
 | :--- | :---: | :---: |:---: |:---: |---: |
-| Abstract Data Types | a | b | Not suitable for adding additional functions. | d | Supports reuse. |
-| Main/Subroutine with stepwise refinement (also Shared Data) | a | b | Easy to add additional functions. | d |  Poor reusability. |
+| Abstract Data Types | a | b | Not suitable for adding additional functions. | Good performance. | Supports reuse. |
+| Main/Subroutine with stepwise refinement (also Shared Data) | a | b | Easy to add additional functions. | Good performance. |  Poor reusability. |
 | Pipes-and-filters | a | b | Easy to add additional functions, becuause it is easy to add filters to the pipe.  | Data transfer between filters with performance losses. | Supports reuse，each filter can run independently. |
-| Implicit invocation (event-driven) | a | b | Easy to add additional functions. | d | Supports reuse. |
+| Implicit invocation (event-driven) | a | b | Easy to add additional functions. | Good performance. | Supports reuse. |
 
 | Eight Queens | change the implementation algorithm | change data representation | add additional functions | performance | Reusability |
 | :--- | :---: | :---: |:---: |:---: |---: |
