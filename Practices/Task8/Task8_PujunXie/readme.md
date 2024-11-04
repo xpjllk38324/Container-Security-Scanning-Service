@@ -6,9 +6,9 @@ In this problem, I use Method 3: Pipes-and-filters. The software architecture di
 
 ![image](https://github.com/xpjllk38324/Container-Security-Scanning-Service/blob/main/Practices/Task8/Task8_PujunXie/figure/KWIC.svg)
 
-The code of problem a is in [Key Word in Context](KWIC.py). This code use
+The code of problem a is in [Key Word in Context Code](KWIC.py). This code use 
 
-The Running example is below: We use the [KWIC orignal text](Orignal_KWIC.txt) as input and get [KWIC result text](Orignal_KWIC.txt) as output.
+The Running example is below: We use the [KWIC orignal text](Orignal_KWIC.txt) as input and get [KWIC result text](Result_KWIC.txt) as output.
 
 ![image](https://github.com/xpjllk38324/Container-Security-Scanning-Service/blob/main/Practices/Task8/Task8_PujunXie/figure/KWIC.png)
 
@@ -17,6 +17,11 @@ In this problem, I use the Method 2: Main/Subroutine with stepwise refinement (a
 
 ![image](https://github.com/xpjllk38324/Container-Security-Scanning-Service/blob/main/Practices/Task8/Task8_PujunXie/figure/8Q.svg)
 
-The code of problem a is in [Eight Queens](8Q.py). This code use 
+The code of problem a is in [Eight Queens Code](8Q.py). This code use 
+
+The Running example is below: We get [8Q result text](Result_8Q.txt) as output file and also get the output answer in the terminal
+which includes the number of the 8Queen solutions and 8Queen solutions.
+
+![image](https://github.com/xpjllk38324/Container-Security-Scanning-Service/blob/main/Practices/Task8/Task8_PujunXie/figure/8Q.png)
 
 ## The compare of the solution
