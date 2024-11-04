@@ -57,3 +57,5 @@ python3 8Q.py
 | :---         |     :---:      |          ---: |
 |Abstract Data Types | git status | git status |
 | Main/Subroutine with stepwise refinement (also Shared Data) | git diff | git diff |
+| Pipes-and-filters | 1 | 1 |
+| Implicit invocation (event-driven) | 1 | 1 |
