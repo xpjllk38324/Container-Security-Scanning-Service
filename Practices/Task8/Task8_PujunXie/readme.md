@@ -48,7 +48,7 @@ which includes the number of the 8Queen solutions and 8Queen solutions.
 2. Run the code with the following command:
 
 ```
-python3 KWIC.py
+python3 8Q.py
 ```
 
 ## The compare of the solution
