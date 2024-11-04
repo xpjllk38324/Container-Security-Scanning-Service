@@ -19,7 +19,7 @@ You need to enter the filepath of input file and output file in main fuction. Th
 ### How to run the code
 
 1. Clone from the Github repository.
-2. Write the input file.
+2. Write the input file Orignal_KWIC.txt.
 3. Run the code with the following command:
 
 ```
