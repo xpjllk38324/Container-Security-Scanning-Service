@@ -53,16 +53,16 @@ python3 8Q.py
 
 ## The compare of the solution
 
-| | a | b | c | d | d | e |
+| Key Word in Context | a | b | c | d | d | e |
 | :--- | :---: | :---: |:---: |:---: |:---: |---: |
 |Abstract Data Types | a | b | c | d | d | e |
 | Main/Subroutine with stepwise refinement (also Shared Data) | a | b | c | d | d | e |
 | Pipes-and-filters | a | b | c | d | d | e |
 | Implicit invocation (event-driven) | a | b | c | d | d | e |
 
-| | Key Word in Context | Eight Queens |
-| :---         |     :---:      |          ---: |
-|Abstract Data Types | git status | git status |
-| Main/Subroutine with stepwise refinement (also Shared Data) | git diff | git diff |
-| Pipes-and-filters | 1 | 1 |
-| Implicit invocation (event-driven) | 1 | 1 |
+| Eight Queens | a | b | c | d | d | e |
+| :--- | :---: | :---: |:---: |:---: |:---: |---: |
+|Abstract Data Types | a | b | c | d | d | e |
+| Main/Subroutine with stepwise refinement (also Shared Data) | a | b | c | d | d | e |
+| Pipes-and-filters | a | b | c | d | d | e |
+| Implicit invocation (event-driven) | a | b | c | d | d | e |
