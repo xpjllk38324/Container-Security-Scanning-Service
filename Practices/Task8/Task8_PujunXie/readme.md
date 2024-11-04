@@ -18,6 +18,10 @@ You need to enter the filepath of input file and output file in main fuction. Th
 
 ### How to run the code
 
+1. Clone from the Github repository.
+2. Write the input file.
+3. Run the code with the following command:
+
 ## Problem B: Eight Queens (8Q)
 In this problem, I use the Method 2: Main/Subroutine with stepwise refinement (also Shared Data). 
 
@@ -35,5 +39,8 @@ which includes the number of the 8Queen solutions and 8Queen solutions.
 ![image](https://github.com/xpjllk38324/Container-Security-Scanning-Service/blob/main/Practices/Task8/Task8_PujunXie/figure/8Q.png)
 
 ### How to run the code
+
+1. Clone from the Github repository.
+2. Run the code with the following command:
 
 ## The compare of the solution
