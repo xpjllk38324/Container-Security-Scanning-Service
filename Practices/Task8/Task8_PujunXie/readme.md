@@ -82,7 +82,7 @@ python3 8Q.py
 
 | Eight Queens | change the implementation algorithm | change data representation | add additional functions | performance | Reusability |
 | :--- | :---: | :---: |:---: |:---: |---: |
-|Abstract Data Types | a | b | c | d | e |
-| Main/Subroutine with stepwise refinement (also Shared Data) | a | b | c | d |  e |
-| Pipes-and-filters | a | b | c | Data transfer between filters with performance losses. | Supports reuse，each filter can run independently. |
-| Implicit invocation (event-driven) | a | b | c | d | e |
+| Abstract Data Types | Not suitable to change the implementation algorithm. | Possible to change data representation. | Not suitable for adding additional functions. | Better performance. | Supports reuse. |
+| Main/Subroutine with stepwise refinement (also Shared Data) | Possible to change the implementation algorithm. | Not suitable to change data representation. | Possible to add additional functions. | Better performance. |  Poor reusability. |
+| Pipes-and-filters | Possible to change the implementation algorithm. | Not suitable to change data representation. | Possible to add additional functions, becuause it is easy to add filters to the pipe.  | Data transfer between filters with performance losses. | Supports reuse，each filter can run independently. |
+| Implicit invocation (event-driven) | Possible to change the implementation algorithm.| Not suitable to change data representation. | Possible to add additional functions. | Better performance. | Supports reuse. |
