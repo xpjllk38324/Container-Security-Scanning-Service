@@ -23,7 +23,7 @@ You need to enter the filepath of input file and output file in main fuction. Th
 3. Run the code with the following command:
 
 ```
-Python3 KWIC.py
+python3 KWIC.py
 ```
 
 ## Problem B: Eight Queens (8Q)
@@ -46,5 +46,9 @@ which includes the number of the 8Queen solutions and 8Queen solutions.
 
 1. Clone from the Github repository.
 2. Run the code with the following command:
+
+```
+python3 KWIC.py
+```
 
 ## The compare of the solution
