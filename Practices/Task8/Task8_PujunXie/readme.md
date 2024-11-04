@@ -16,6 +16,8 @@ You need to enter the filepath of input file and output file in main fuction. Th
 
 ![image](https://github.com/xpjllk38324/Container-Security-Scanning-Service/blob/main/Practices/Task8/Task8_PujunXie/figure/KWIC.png)
 
+### How to run the code
+
 ## Problem B: Eight Queens (8Q)
 In this problem, I use the Method 2: Main/Subroutine with stepwise refinement (also Shared Data). 
 
@@ -31,5 +33,7 @@ You need to enter the filepath of output file in main fuction. The Running examp
 which includes the number of the 8Queen solutions and 8Queen solutions.
 
 ![image](https://github.com/xpjllk38324/Container-Security-Scanning-Service/blob/main/Practices/Task8/Task8_PujunXie/figure/8Q.png)
+
+### How to run the code
 
 ## The compare of the solution
