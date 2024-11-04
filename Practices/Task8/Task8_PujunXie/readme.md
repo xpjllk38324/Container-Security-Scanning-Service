@@ -84,5 +84,5 @@ python3 8Q.py
 | :--- | :---: | :---: |:---: |:---: |---: |
 |Abstract Data Types | a | b | c | d | e |
 | Main/Subroutine with stepwise refinement (also Shared Data) | a | b | c | d |  e |
-| Pipes-and-filters | a | b | c | d | e |
+| Pipes-and-filters | a | b | c | Data transfer between filters with performance losses. | Supports reuse，each filter can run independently. |
 | Implicit invocation (event-driven) | a | b | c | d | e |
