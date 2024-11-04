@@ -52,3 +52,8 @@ python3 8Q.py
 ```
 
 ## The compare of the solution
+
+| Problem | Center-aligned | Right-aligned |
+| :---         |     :---:      |          ---: |
+| Key Word in Context   | git status     | git status    |
+| Eight Queens     | git diff       | git diff      |
