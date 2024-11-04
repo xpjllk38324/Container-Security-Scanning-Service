@@ -17,7 +17,8 @@ In this problem, I use the Method 2: Main/Subroutine with stepwise refinement (a
 
 ![image](https://github.com/xpjllk38324/Container-Security-Scanning-Service/blob/main/Practices/Task8/Task8_PujunXie/figure/8Q.svg)
 
-The code of problem b is in [Eight Queens Code](8Q.py). This code use 
+The code of problem b is in [Eight Queens Code](8Q.py). This code put every functions in different processes and use multiprocessing manager to share the data.
+You need to enter the filepath of output file in main fuction.
 
 The Running example is below: We get [8Q result text](Result_8Q.txt) as output file and also get the output answer in the terminal
 which includes the number of the 8Queen solutions and 8Queen solutions.
