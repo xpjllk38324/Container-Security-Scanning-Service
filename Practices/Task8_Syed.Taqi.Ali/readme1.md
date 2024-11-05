@@ -49,6 +49,7 @@ Ensure Python 3 is installed.
 To execute, run:
 
 python eight_queens_solution.py
+
 Output:
 
 Each solution is printed as a board layout, with Q indicating queen positions.
