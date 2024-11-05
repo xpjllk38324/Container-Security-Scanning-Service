@@ -1,5 +1,6 @@
 import subprocess
 
+
 def main():
     # Titles for the KWIC index as an example
     titles = [
@@ -31,6 +32,7 @@ def main():
     # Capture and print the final output
     output, _ = p4.communicate()
     print(output.decode('utf-8'))
+
 
 if __name__ == "__main__":
     main()
