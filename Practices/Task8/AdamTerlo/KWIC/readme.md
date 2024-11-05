@@ -1,6 +1,6 @@
 # KWIC Index Solution - Pipes and Filters Architecture
 
-This repository contains a KWIC (Key Word in Context) solution implemented in Python, using the **Pipes and Filters architecture**. Each stage in the KWIC process (input, shifting, sorting, and output) is implemented as an independent module, which allows for flexible and modular processing.
+This repository contains a KWIC (Key Word in Context) solution implemented in python3, using the **Pipes and Filters architecture**. Each stage in the KWIC process (input, shifting, sorting, and output) is implemented as an independent module, which allows for flexible and modular processing.
 
 
 ![Figure 1: Pipe and Filter Solution for KWIC](images/kwic.png "Figure 1: Pipe and Filter Solution for KWIC")
@@ -32,22 +32,22 @@ To run each module as a distinct script, use a series of `pipes` in the command 
 
 ```bash
 # Run with plain text output
-python input_filter.py "Design Patterns and Software Architecture" \
+python3 input_filter.py "Design Patterns and Software Architecture" \
                        "Introduction to Advanced Computing" \
                        "Principles of Software Engineering" \
                        "Software Design for Performance" | \
-python shift_filter.py | \
-python alphabetize_filter.py | \
-python output_filter.py
+python3 shift_filter.py | \
+python3 alphabetize_filter.py | \
+python3 output_filter.py
 
 # Run with formatted output using the --pretty flag
-python input_filter.py "Design Patterns and Software Architecture" \
+python3 input_filter.py "Design Patterns and Software Architecture" \
                        "Introduction to Advanced Computing" \
                        "Principles of Software Engineering" \
                        "Software Design for Performance" | \
-python shift_filter.py | \
-python alphabetize_filter.py | \
-python output_filter.py --pretty
+python3 shift_filter.py | \
+python3 alphabetize_filter.py | \
+python3 output_filter.py --pretty
 ```
 
 ### Method 2: Running through `main.py`
@@ -56,10 +56,10 @@ For ease of use, you can run the solution using `main.py`, which orchestrates th
 
 ```bash
 # Run with plain text output
-python main.py
+python3 main.py
 
 # Run with formatted output using the --pretty flag
-python main.py --pretty
+python3 main.py --pretty
 ```
 
 ---
@@ -67,13 +67,13 @@ python main.py --pretty
 ### Example input:
 
 ```bash
-python input_filter.py "Design Patterns and Software Architecture and some other words" \
+python3 input_filter.py "Design Patterns and Software Architecture and some other words" \
                        "Introduction to Advanced Computing is nice and quite long and has a lot of words" \
                        "Principles of Software Engineering" \
                        "this one is shorter" \
                        "Software Design for Performance" \
                        "Hello World" \
-                       "A Quick Guide to Python Programming" \
+                       "A Quick Guide to python3 Programming" \
                        "Advanced Topics in Machine Learning" \
                        "Web Development with Flask and Django" \
                        "An Exploration of Data Structures" \
@@ -84,9 +84,9 @@ python input_filter.py "Design Patterns and Software Architecture and some other
                        "Building Scalable Applications in the Cloud" \
                        "Introduction to Cybersecurity Best Practices" \
                        "Optimizing Database Performance for Large Systems" | \
-python shift_filter.py | \
-python alphabetize_filter.py | \
-python output_filter.py --pretty
+python3 shift_filter.py | \
+python3 alphabetize_filter.py | \
+python3 output_filter.py --pretty
 ```
 
 
@@ -176,7 +176,7 @@ This approach also supports distributed control. Each process-based filter runs 
 
 Furthermore, this process-based model follows the Unix philosophy, which emphasizes chaining simple, single-purpose programs. Each filter reads from standard input and writes to standard output, just like a Unix pipeline, which makes testing, debugging, and replacing components simple and seamless.
 
-Additionally, separate processes can run in parallel across CPU cores, which is beneficial for a data-processing pipeline like KWIC. Python's threading is often limited by the Global Interpreter Lock (GIL), so true parallelism can be difficult to achieve with threads. This process-based design, however, allows for efficient handling of inputs and can scale well.
+Additionally, separate processes can run in parallel across CPU cores, which is beneficial for a data-processing pipeline like KWIC. python3's threading is often limited by the Global Interpreter Lock (GIL), so true parallelism can be difficult to achieve with threads. This process-based design, however, allows for efficient handling of inputs and can scale well.
 
 In conclusion, this approach closely matches the Pipes and Filters architecture. The process-based design maintains modularity, isolation, and flexibility, which aligns well with Unix-inspired principles, keeping each filter independent, reusable, and easy to modify.
 
@@ -184,3 +184,4 @@ In conclusion, this approach closely matches the Pipes and Filters architecture.
 
 # References
 1. Garlan, D., & Shaw, M. (1993). AN INTRODUCTION TO SOFTWARE ARCHITECTURE., https://doi.org/10.1142/9789812798039_0001
+2. Wikipedia contributors. (2024, August 12). Key word in context. Wikipedia., https://en.wikipedia.org/wiki/Key_Word_in_Context
