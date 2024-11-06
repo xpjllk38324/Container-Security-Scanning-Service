@@ -158,4 +158,3 @@ digraph DDD_Class_Model {
   ScanningService -> VulnerabilityDatabaseRepository [style=dashed];
   AlertService -> AuditLog [label="1..* logs"];
 }
-
