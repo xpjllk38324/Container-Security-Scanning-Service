@@ -1,0 +1,39 @@
+digraph Alert_Management_Aggregate {
+  node [shape=plaintext];
+
+  // Root: AlertService
+  AlertService [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«root» AlertService</b></td></tr>
+      <tr><td align="left">+ notify(engineer: User, message: String)<br 
+align="left"/>+ triggerAlert(vulnerability: VulnerabilityRecord)<br 
+align="left"/>+ sendCriticalAlert(severity: Severity)</td></tr>
+    </table>>];
+
+  // Entity: AuditLog
+  AuditLog [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«entity» AuditLog</b></td></tr>
+      <tr><td align="left">- logId: UUID<br align="left"/>- eventType: 
+String<br align="left"/>- timestamp: DateTime<br align="left"/>- details: 
+String</td></tr>
+      <tr><td border="1" align="left">+ createLog()<br align="left"/>+ 
+getLogs()</td></tr>
+    </table>>];
+
+  // Enum: Severity
+  Severity [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«enum» Severity</b></td></tr>
+      <tr><td align="left">+ LOW: Severity<br align="left"/>+ MEDIUM: 
+Severity<br align="left"/>+ HIGH: Severity<br align="left"/>+ CRITICAL: 
+Severity</td></tr>
+    </table>>];
+
+  // Relationships within the Alert Management Aggregate
+  AlertService -> AuditLog [label="1..* logs" arrowtail=odiamond 
+arrowhead=normal dir=back];
+  AlertService -> Severity [label="references criticality" 
+arrowhead=normal];
+}
+
