@@ -1,0 +1,38 @@
+digraph User_Management_Aggregate {
+  node [shape=plaintext];
+
+  // Root: User
+  User [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«root» User</b></td></tr>
+      <tr><td align="left">+ id: UUID<br align="left"/>+ name: String<br 
+align="left"/>+ email: String</td></tr>
+      <tr><td border="1" align="left">+ notify()<br align="left"/>+ 
+getId(): UUID<br align="left"/>+ getName(): String<br align="left"/>+ 
+getEmail(): String<br align="left"/>+ setName(name: String)<br 
+align="left"/>+ setEmail(email: String)</td></tr>
+    </table>>];
+
+  // Entity: Permissions
+  Permissions [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«entity» Permissions</b></td></tr>
+      <tr><td align="left">- id: UUID<br align="left"/>- name: String<br 
+align="left"/>- description: String</td></tr>
+    </table>>];
+
+  // Relationship Table: UserPermissions
+  UserPermissions [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>UserPermissions</b></td></tr>
+      <tr><td align="left">- userId: UUID<br align="left"/>- permissionId: 
+UUID</td></tr>
+    </table>>];
+
+  // Relationships within the User Management Aggregate
+  User -> UserPermissions [label="0..* has" arrowtail=odiamond 
+arrowhead=normal dir=back];
+  Permissions -> UserPermissions [label="1..* provides" arrowtail=odiamond 
+arrowhead=normal dir=back];
+}
+

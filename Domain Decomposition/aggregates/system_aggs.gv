@@ -1,0 +1,52 @@
+digraph System_Aggregates {
+  node [shape=plaintext];
+
+  // Aggregates
+  VulnerabilityManagement [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«aggregate» VulnerabilityManagement</b></td></tr>
+      <tr><td align="left">Root: VulnerabilityEntryManager</td></tr>
+    </table>>];
+
+  Scanning [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«aggregate» Scanning</b></td></tr>
+      <tr><td align="left">Root: ScanningService</td></tr>
+    </table>>];
+
+  ContainerManagement [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«aggregate» ContainerManagement</b></td></tr>
+      <tr><td align="left">Root: Container</td></tr>
+    </table>>];
+
+  AlertManagement [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«aggregate» AlertManagement</b></td></tr>
+      <tr><td align="left">Root: AlertService</td></tr>
+    </table>>];
+
+  UserManagement [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«aggregate» UserManagement</b></td></tr>
+      <tr><td align="left">Root: User</td></tr>
+    </table>>];
+
+  // Relationships
+  Scanning -> VulnerabilityManagement [label="retrieves vulnerability data 
+from" arrowhead=normal style=dashed];
+  Scanning -> ContainerManagement [label="scans" arrowhead=normal];
+  Scanning -> AlertManagement [label="triggers alerts in case of findings" 
+arrowhead=normal];
+  AlertManagement -> UserManagement [label="notifies users" 
+arrowhead=normal];
+  ContainerManagement -> UserManagement [label="access controlled by" 
+arrowhead=normal];
+
+  // Ownership relationships
+  VulnerabilityManagement -> AlertManagement [label="logs critical 
+findings" arrowtail=odiamond arrowhead=normal dir=both];
+  UserManagement -> AlertManagement [label="tracks notifications" 
+arrowtail=odiamond arrowhead=normal dir=both];
+}
+

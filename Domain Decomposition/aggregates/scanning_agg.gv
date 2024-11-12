@@ -1,0 +1,79 @@
+digraph Scanning_Aggregate {
+  node [shape=plaintext];
+
+  ScanningService [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«root» ScanningService</b></td></tr>
+      <tr><td align="left">+ scan(container: Container)<br align="left"/>+ 
+scheduleScan(rule: AssessmentRule)<br align="left"/>+ generateReport(task: 
+ScanTask)</td></tr>
+    </table>>];
+
+  AssessmentRule [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«entity» AssessmentRule</b></td></tr>
+      <tr><td align="left">- ruleId: UUID<br align="left"/>- criteria: 
+String<br align="left"/>- severityLimit: Severity</td></tr>
+      <tr><td border="1" align="left">+ evaluateContainer()<br 
+align="left"/>+ reviseRule()<br align="left"/>+ getRuleId(): UUID<br 
+align="left"/>+ getCriteria(): String<br align="left"/>+ 
+getSeverityLimit(): Severity<br align="left"/>+ setCriteria(criteria: 
+String)<br align="left"/>+ setSeverityLimit(severity: Severity)</td></tr>
+    </table>>];
+
+  ScanTask [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«entity» ScanTask</b></td></tr>
+      <tr><td align="left">- taskId: UUID<br align="left"/>- container: 
+Container<br align="left"/>- startTime: DateTime<br align="left"/>- 
+result: ScanResult<br align="left"/>- status: ScanStatus</td></tr>
+      <tr><td border="1" align="left">+ execute()<br align="left"/>+ 
+generateReport()<br align="left"/>+ getTaskId(): UUID<br align="left"/>+ 
+getContainer(): Container<br align="left"/>+ getStartTime(): DateTime<br 
+align="left"/>+ getResult(): ScanResult<br align="left"/>+ 
+setContainer(container: Container)<br align="left"/>+ setResult(result: 
+ScanResult)<br align="left"/>+ setStatus(status: ScanStatus)</td></tr>
+    </table>>];
+
+  ScanStatus [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«enum» ScanStatus</b></td></tr>
+      <tr><td align="left">+ PENDING: ScanStatus<br align="left"/>+ 
+IN_PROGRESS: ScanStatus<br align="left"/>+ COMPLETED: ScanStatus<br 
+align="left"/>+ FAILED: ScanStatus</td></tr>
+    </table>>];
+
+  ScanResult [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«value object» ScanResult</b></td></tr>
+      <tr><td align="left">- vulnerabilitiesFound: 
+List&lt;VulnerabilityRecord&gt;<br align="left"/>- severity: Severity<br 
+align="left"/>- summary: String</td></tr>
+      <tr><td border="1" align="left">+ analyze()<br align="left"/>+ 
+getVulnerabilitiesFound(): List&lt;VulnerabilityRecord&gt;<br 
+align="left"/>+ getSeverity(): Severity<br align="left"/>+ getSummary(): 
+String<br align="left"/>+ setSeverity(severity: Severity)<br 
+align="left"/>+ setSummary(summary: String)</td></tr>
+    </table>>];
+    
+         Severity [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«enum» Severity</b></td></tr>
+      <tr><td align="left">+ LOW: Severity<br align="left"/>+ MEDIUM: 
+Severity<br align="left"/>+ HIGH: Severity<br align="left"/>+ CRITICAL: 
+Severity</td></tr>
+    </table>>];
+
+  // Relationships within the Scanning Aggregate
+  ScanningService -> ScanTask [label="1..1 initiates" arrowtail=odiamond 
+arrowhead=normal dir=back];
+  ScanningService -> AssessmentRule [label="1..1 references" 
+arrowtail=odiamond arrowhead=normal dir=back];
+  ScanTask -> ScanResult [label="1..1 has" arrowtail=odiamond 
+arrowhead=normal dir=back];
+  ScanTask -> ScanStatus [label="indicates status" arrowtail=odiamond 
+arrowhead=normal dir=back];
+  ScanResult -> Severity [label="uses" arrowhead=normal];
+  AssessmentRule -> Severity [label="limits severity" arrowhead=normal];
+}
+

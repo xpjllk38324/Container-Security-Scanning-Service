@@ -2,20 +2,8 @@ digraph DDD_Class_Model {
   node [shape=plaintext];
 
 
-  VulnerabilityDatabase [label=<
-    <table border="0" cellborder="1" cellspacing="0">
-      <tr><td><b>«entity» VulnerabilityDatabase</b></td></tr>
-      <tr><td align="left">- id: UUID<br align="left"/>- name: String<br align="left"/>- dateUpdated: Date<br align="left"/>- entries: List&lt;VulnerabilityRecord&gt;</td></tr>
-      <tr><td border="1" align="left">+ addEntry()<br align="left"/>+ deleteEntry()<br align="left"/>+ updateEntry()<br align="left"/>+ getId(): UUID<br align="left"/>+ getName(): String<br align="left"/>+ getDateUpdated(): Date<br align="left"/>+ getEntries(): List&lt;VulnerabilityRecord&gt;<br align="left"/>+ setName(name: String)<br align="left"/>+ setDateUpdated(date: Date)</td></tr>
-    </table>>];
 
-  // Value Object: VulnerabilityRecord
-  VulnerabilityRecord [label=<
-    <table border="0" cellborder="1" cellspacing="0">
-      <tr><td><b>«value object» VulnerabilityRecord</b></td></tr>
-      <tr><td align="left">- id: UUID<br align="left"/>- severity: Severity<br align="left"/>- description: String<br align="left"/>- fixAvailable: Boolean</td></tr>
-      <tr><td border="1" align="left">+ getId(): UUID<br align="left"/>+ getSeverity(): Severity<br align="left"/>+ getDescription(): String<br align="left"/>+ isFixAvailable(): Boolean<br align="left"/>+ setSeverity(severity: Severity)<br align="left"/>+ setDescription(description: String)<br align="left"/>+ setFixAvailable(fixAvailable: Boolean)</td></tr>
-    </table>>];
+
 
 
   Container [label=<
@@ -70,12 +58,11 @@ digraph DDD_Class_Model {
       <tr><td><b>«service» ScanningService</b></td></tr>
       <tr><td align="left">+ scan(container: Container)<br align="left"/>+ scheduleScan(rule: ContainerScanRule)<br align="left"/>+ generateReport(task: ScanTask)</td></tr>
     </table>>];
-
-
-  AlertService [label=<
+    
+    AlertService [label=<
     <table border="0" cellborder="1" cellspacing="0">
       <tr><td><b>«service» AlertService</b></td></tr>
-      <tr><td align="left">+ notify(engineer: Person, message: String)<br align="left"/>+ triggerAlert(vulnerability: VulnerabilityRecord)<br align="left"/>+ sendCriticalAlert(severity: Severity)</td></tr>
+      <tr><td align="left">+ notify(engineer: User, message: String)<br align="left"/>+ triggerAlert(vulnerability: VulnerabilityRecord)<br align="left"/>+ sendCriticalAlert(severity: Severity)</td></tr>
     </table>>];
 
 
@@ -87,12 +74,6 @@ digraph DDD_Class_Model {
     </table>>];
 
 
-  VulnerabilityDatabaseRepository [label=<
-    <table border="0" cellborder="1" cellspacing="0">
-      <tr><td><b>«repository» VulnerabilityDatabaseRepository</b></td></tr>
-      <tr><td align="left">+ findById(id: UUID)<br align="left"/>+ save(database: VulnerabilityDatabase)<br align="left"/>+ delete(id: UUID)</td></tr>
-    </table>>];
-
 
   ContainerRuleRepository [label=<
     <table border="0" cellborder="1" cellspacing="0">
@@ -100,34 +81,14 @@ digraph DDD_Class_Model {
       <tr><td align="left">+ findById(id: UUID)<br align="left"/>+ save(rule: ContainerScanRule)<br align="left"/>+ delete(id: UUID)</td></tr>
     </table>>];
 
-  // Abstract Class: Person
-  Person [label=<
+  // Abstract Class: User
+  User [label=<
     <table border="0" cellborder="1" cellspacing="0">
-      <tr><td><b>«abstract entity» Person</b></td></tr>
+      <tr><td><b>«abstract entity» User</b></td></tr>
       <tr><td align="left">+ id: UUID<br align="left"/>+ name: String<br align="left"/>+ email: String</td></tr>
       <tr><td border="1" align="left">+ notify()<br align="left"/>+ getId(): UUID<br align="left"/>+ getName(): String<br align="left"/>+ getEmail(): String<br align="left"/>+ setName(name: String)<br align="left"/>+ setEmail(email: String)</td></tr>
     </table>>];
 
-  // Subclass: InformationSecurityEngineer
-  InformationSecurityEngineer [label=<
-    <table border="0" cellborder="1" cellspacing="0">
-      <tr><td><b>«entity» InformationSecurityEngineer</b></td></tr>
-      <tr><td align="left">+ configureVulnerabilityDatabase()<br align="left"/>+ manageScanRules()</td></tr>
-    </table>>];
-
-  // Subclass: DevOpsEngineer
-  DevOpsEngineer [label=<
-    <table border="0" cellborder="1" cellspacing="0">
-      <tr><td><b>«entity» DevOpsEngineer</b></td></tr>
-      <tr><td align="left">+ manageDeployment()<br align="left"/>+ performContainerScan()<br align="left"/>+ setAlerts()</td></tr>
-    </table>>];
-
-
-  Developer [label=<
-    <table border="0" cellborder="1" cellspacing="0">
-      <tr><td><b>«entity» Developer</b></td></tr>
-      <tr><td align="left">+ fixVulnerability()<br align="left"/>+ reviewScanReport()</td></tr>
-    </table>>];
 
 
   Severity [label=<
@@ -137,7 +98,55 @@ digraph DDD_Class_Model {
     </table>>];
 
 
+    // Class: Permissions
+    Permissions [label=<
+      <table border="0" cellborder="1" cellspacing="0">
+        <tr><td><b>«entity» Permissions</b></td></tr>
+        <tr><td align="left">- id: UUID<br align="left"/>- name: String<br align="left"/>- description: String</td></tr>
+      </table>>];
+    
+    // Relationship table: UserPermissions
+    UserPermissions [label=<
+      <table border="0" cellborder="1" cellspacing="0">
+        <tr><td><b>UserPermissions</b></td></tr>
+        <tr><td align="left">- userId: UUID<br align="left"/>- permissionId: UUID</td></tr>
+      </table>>];
+    
+    User -> UserPermissions [label="0..* has"];
+    Permissions -> UserPermissions [label="1..* provides"];
+    
+
+
+  // Simplified VulnerabilityDatabase class
+  VulnerabilityDatabase [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>VulnerabilityDatabase</b></td></tr>
+      <tr><td align="left">- id: UUID<br align="left"/>- name: String<br align="left"/>- dateUpdated: Date</td></tr>
+    </table>>];
+
+  // VulnerabilityRecord represents individual entries
+  VulnerabilityRecord [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«value object» VulnerabilityRecord</b></td></tr>
+      <tr><td align="left">- id: UUID<br align="left"/>- severity: Severity<br align="left"/>- description: String<br align="left"/>- fixAvailable: Boolean</td></tr>
+    </table>>];
+
+  // New class for managing VulnerabilityRecord entries
+  VulnerabilityEntryManager [label=<
+    <table border="0" cellborder="1" cellspacing="0">
+      <tr><td><b>«service» VulnerabilityEntryManager</b></td></tr>
+      <tr><td align="left">+ addEntry(record: VulnerabilityRecord)<br align="left"/>+ deleteEntry(id: UUID)<br align="left"/>+ updateEntry(record: VulnerabilityRecord)<br align="left"/>+ findEntryById(id: UUID): VulnerabilityRecord<br align="left"/>+ listAllEntries(): List&lt;VulnerabilityRecord&gt;<br align="left"/>+ getEntriesBySeverity(severity: Severity): List&lt;VulnerabilityRecord&gt;</td></tr>
+    </table>>];
+    
+    // Relationships
   VulnerabilityDatabase -> VulnerabilityRecord [label="1..* contains" arrowtail=odiamond];
+  VulnerabilityEntryManager -> VulnerabilityRecord [label="1..* manages" arrowtail=odiamond];
+
+
+
+    
+
+
   ScanResult -> VulnerabilityRecord [label="1..* aggregates" arrowtail=odiamond];
   Container -> ContainerScanRule [label="1..* applies" arrowtail=odiamond];
   ScanTask -> ScanResult [label="1..1 has"];
@@ -145,16 +154,19 @@ digraph DDD_Class_Model {
   ScanningService -> ScanTask [label="1..1 initiates"];
   ScanningService -> ContainerScanRule [label="1..1 references"];
   AlertService -> VulnerabilityRecord [label="1..1 triggers"];
-  AlertService -> Person [label="0..* notifies"];
+  AlertService -> User [label="0..* notifies"];
   AlertService -> Severity [label="1..* criticality"];
-  VulnerabilityDatabaseRepository -> VulnerabilityDatabase [label="1..1 stores"];
+  
   ContainerRuleRepository -> ContainerScanRule [label="1..1 manages"];
-  Person -> InformationSecurityEngineer [label="0..1 role"];
-  Person -> DevOpsEngineer [label="0..1 role"];
-  Person -> Developer [label="0..1 role"];
+  ScanningService -> VulnerabilityEntryManager [label="gets entries from" style=dashed];  
+
   
 
-  AuditLog -> VulnerabilityDatabase [label="1..* logs"];
-  ScanningService -> VulnerabilityDatabaseRepository [style=dashed];
+  AuditLog -> VulnerabilityEntryManager [label="1..* logs"];
   AlertService -> AuditLog [label="1..* logs"];
+  ContainerScanRule -> AssessmentRule [label="uses for criteria" arrowtail=odiamond];
+  
+  ScanTask -> ScanStatus [label="indicates status" arrowtail=odiamond];
+
+
 }
