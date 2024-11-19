@@ -4,31 +4,31 @@ digraph System_Aggregates {
   // Aggregates
   VulnerabilityManagement [label=<
     <table border="0" cellborder="1" cellspacing="0">
-      <tr><td><b>«aggregate» VulnerabilityManagement</b></td></tr>
+      <tr><td><b>VulnerabilityManagement</b></td></tr>
       <tr><td align="left">Root: VulnerabilityEntryManager</td></tr>
     </table>>];
 
   Scanning [label=<
     <table border="0" cellborder="1" cellspacing="0">
-      <tr><td><b>«aggregate» Scanning</b></td></tr>
+      <tr><td><b>Scanning</b></td></tr>
       <tr><td align="left">Root: ScanningService</td></tr>
     </table>>];
 
   ContainerManagement [label=<
     <table border="0" cellborder="1" cellspacing="0">
-      <tr><td><b>«aggregate» ContainerManagement</b></td></tr>
+      <tr><td><b>ContainerManagement</b></td></tr>
       <tr><td align="left">Root: Container</td></tr>
     </table>>];
 
   AlertManagement [label=<
     <table border="0" cellborder="1" cellspacing="0">
-      <tr><td><b>«aggregate» AlertManagement</b></td></tr>
+      <tr><td><b>AlertManagement</b></td></tr>
       <tr><td align="left">Root: AlertService</td></tr>
     </table>>];
 
   UserManagement [label=<
     <table border="0" cellborder="1" cellspacing="0">
-      <tr><td><b>«aggregate» UserManagement</b></td></tr>
+      <tr><td><b>UserManagement</b></td></tr>
       <tr><td align="left">Root: User</td></tr>
     </table>>];
 
