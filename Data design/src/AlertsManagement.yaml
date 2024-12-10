@@ -1,0 +1,230 @@
+openapi: 3.0.0
+info:
+  title: Alerts Management API
+  version: 1.0.0
+servers:
+  - url: 'http://api.alertsmanagement.com/v1'
+paths:
+  /alerts:
+    get:
+      summary: Retrieve all Alerts
+      responses:
+        '200':
+          description: A list of Alerts
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Alert'
+    post:
+      summary: Create a new Alert
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Alert'
+      responses:
+        '201':
+          description: Created Alert
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Alert'
+
+  /alerts/{id}:
+    get:
+      summary: Retrieve a specific Alert
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the Alert
+      responses:
+        '200':
+          description: A specific Alert
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Alert'
+    put:
+      summary: Update a specific Alert
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the Alert
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Alert'
+      responses:
+        '200':
+          description: Updated Alert
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Alert'
+    delete:
+      summary: Delete a specific Alert
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the Alert
+      responses:
+        '204':
+          description: Alert deleted successfully
+
+  /audit-logs:
+    get:
+      summary: Retrieve all AuditLogs
+      responses:
+        '200':
+          description: A list of AuditLogs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/AuditLog'
+    post:
+      summary: Create a new AuditLog
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AuditLog'
+      responses:
+        '201':
+          description: Created AuditLog
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuditLog'
+
+  /audit-logs/{id}:
+    get:
+      summary: Retrieve a specific AuditLog
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the AuditLog
+      responses:
+        '200':
+          description: A specific AuditLog
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuditLog'
+    put:
+      summary: Update a specific AuditLog
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the AuditLog
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AuditLog'
+      responses:
+        '200':
+          description: Updated AuditLog
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuditLog'
+    delete:
+      summary: Delete a specific AuditLog
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the AuditLog
+      responses:
+        '204':
+          description: AuditLog deleted successfully
+
+components:
+  schemas:
+    Alert:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        type:
+          type: string
+          maxLength: 50
+          enum:
+            - critical
+            - warning
+            - info
+        message:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+        resolved_at:
+          type: string
+          format: date-time
+        status:
+          type: string
+          maxLength: 50
+          enum:
+            - active
+            - resolved
+            - dismissed
+        priority:
+          type: integer
+          minimum: 1
+          maximum: 5
+        recipient_user_id:
+          type: integer
+          format: int64
+        related_scan_id:
+          type: integer
+          format: int64
+        updated_at:
+          type: string
+          format: date-time
+    AuditLog:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        action:
+          type: string
+          maxLength: 255
+        performed_by:
+          type: integer
+          format: int64
+        performed_at:
+          type: string
+          format: date-time
+        related_alert_id:
+          type: integer
+          format: int64
+        details:
+          type: string

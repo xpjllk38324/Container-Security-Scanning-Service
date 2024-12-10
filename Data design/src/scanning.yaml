@@ -1,0 +1,614 @@
+openapi: 3.0.0
+info:
+  title: Scanning API
+  version: 1.0.0
+servers:
+  - url: 'http://api.scanning.com/v1'
+paths:
+  /scan-statuses:
+    get:
+      summary: Retrieve all ScanStatuses
+      responses:
+        '200':
+          description: A list of ScanStatuses
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ScanStatus'
+    post:
+      summary: Create a new ScanStatus
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ScanStatus'
+      responses:
+        '201':
+          description: Created ScanStatus
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ScanStatus'
+
+  /scan-statuses/{id}:
+    get:
+      summary: Retrieve a specific ScanStatus
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the ScanStatus
+      responses:
+        '200':
+          description: A specific ScanStatus
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ScanStatus'
+    put:
+      summary: Update a specific ScanStatus
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the ScanStatus
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ScanStatus'
+      responses:
+        '200':
+          description: Updated ScanStatus
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ScanStatus'
+    delete:
+      summary: Delete a specific ScanStatus
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the ScanStatus
+      responses:
+        '204':
+          description: ScanStatus deleted successfully
+
+  # Additional paths for ScanTask, ScanResult, Severity, AssessmentRule, and ScanningService follow the same structure
+
+  /scan-tasks:
+    get:
+      summary: Retrieve all ScanTasks
+      responses:
+        '200':
+          description: A list of ScanTasks
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ScanTask'
+    post:
+      summary: Create a new ScanTask
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ScanTask'
+      responses:
+        '201':
+          description: Created ScanTask
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ScanTask'
+
+  /scan-tasks/{id}:
+    get:
+      summary: Retrieve a specific ScanTask
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the ScanTask
+      responses:
+        '200':
+          description: A specific ScanTask
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ScanTask'
+    put:
+      summary: Update a specific ScanTask
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the ScanTask
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ScanTask'
+      responses:
+        '200':
+          description: Updated ScanTask
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ScanTask'
+    delete:
+      summary: Delete a specific ScanTask
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the ScanTask
+      responses:
+        '204':
+          description: ScanTask deleted successfully
+
+  # ScanResult paths
+  /scan-results:
+    get:
+      summary: Retrieve all ScanResults
+      responses:
+        '200':
+          description: A list of ScanResults
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ScanResult'
+    post:
+      summary: Create a new ScanResult
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ScanResult'
+      responses:
+        '201':
+          description: Created ScanResult
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ScanResult'
+
+  /scan-results/{id}:
+    get:
+      summary: Retrieve a specific ScanResult
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the ScanResult
+      responses:
+        '200':
+          description: A specific ScanResult
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ScanResult'
+    put:
+      summary: Update a specific ScanResult
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the ScanResult
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ScanResult'
+      responses:
+        '200':
+          description: Updated ScanResult
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ScanResult'
+    delete:
+      summary: Delete a specific ScanResult
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the ScanResult
+      responses:
+        '204':
+          description: ScanResult deleted successfully
+
+  # Severity paths
+  /severities:
+    get:
+      summary: Retrieve all Severities
+      responses:
+        '200':
+          description: A list of Severities
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Severity'
+    post:
+      summary: Create a new Severity
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Severity'
+      responses:
+        '201':
+          description: Created Severity
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Severity'
+
+  /severities/{id}:
+    get:
+      summary: Retrieve a specific Severity
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the Severity
+      responses:
+        '200':
+          description: A specific Severity
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Severity'
+    put:
+      summary: Update a specific Severity
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the Severity
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Severity'
+      responses:
+        '200':
+          description: Updated Severity
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Severity'
+    delete:
+      summary: Delete a specific Severity
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the Severity
+      responses:
+        '204':
+          description: Severity deleted successfully
+
+  # AssessmentRule paths
+  /assessment-rules:
+    get:
+      summary: Retrieve all AssessmentRules
+      responses:
+        '200':
+          description: A list of AssessmentRules
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/AssessmentRule'
+    post:
+      summary: Create a new AssessmentRule
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AssessmentRule'
+      responses:
+        '201':
+          description: Created AssessmentRule
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AssessmentRule'
+
+  /assessment-rules/{id}:
+    get:
+      summary: Retrieve a specific AssessmentRule
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the AssessmentRule
+      responses:
+        '200':
+          description: A specific AssessmentRule
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AssessmentRule'
+    put:
+      summary: Update a specific AssessmentRule
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the AssessmentRule
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AssessmentRule'
+      responses:
+        '200':
+          description: Updated AssessmentRule
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AssessmentRule'
+    delete:
+      summary: Delete a specific AssessmentRule
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the AssessmentRule
+      responses:
+        '204':
+          description: AssessmentRule deleted successfully
+
+  # ScanningService paths
+  /scanning-services:
+    get:
+      summary: Retrieve all ScanningServices
+      responses:
+        '200':
+          description: A list of ScanningServices
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ScanningService'
+    post:
+      summary: Create a new ScanningService
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ScanningService'
+      responses:
+        '201':
+          description: Created ScanningService
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ScanningService'
+
+  /scanning-services/{id}:
+    get:
+      summary: Retrieve a specific ScanningService
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the ScanningService
+      responses:
+        '200':
+          description: A specific ScanningService
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ScanningService'
+    put:
+      summary: Update a specific ScanningService
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the ScanningService
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ScanningService'
+      responses:
+        '200':
+          description: Updated ScanningService
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ScanningService'
+    delete:
+      summary: Delete a specific ScanningService
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the ScanningService
+      responses:
+        '204':
+          description: ScanningService deleted successfully
+
+components:
+  schemas:
+    ScanStatus:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        status_name:
+          type: string
+          maxLength: 50
+        description:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+    ScanTask:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        scanning_service_id:
+          type: integer
+          format: int64
+        status_id:
+          type: integer
+          format: int64
+        frequency:
+          type: string
+          maxLength: 50
+        scheduled_at:
+          type: string
+          format: date-time
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+    ScanResult:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        scan_task_id:
+          type: integer
+          format: int64
+        vulnerabilities_found:
+          type: integer
+          default: 0
+        severity_level_id:
+          type: integer
+          format: int64
+        result_summary:
+          type: object
+          additionalProperties: true
+        full_report:
+          type: string
+        scanned_at:
+          type: string
+          format: date-time
+    Severity:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        level_name:
+          type: string
+          maxLength: 50
+        level_value:
+          type: integer
+          format: int32
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+    AssessmentRule:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        rule_name:
+          type: string
+          maxLength: 100
+        description:
+          type: string
+        severity_id:
+          type: integer
+          format: int64
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+    ScanningService:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+          maxLength: 100
+        description:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time

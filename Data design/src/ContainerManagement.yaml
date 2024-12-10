@@ -1,0 +1,319 @@
+openapi: 3.0.0
+info:
+  title: Container Management API
+  version: 1.0.0
+servers:
+  - url: http://api.containermanagement.com/v1
+paths:
+  /containers:
+    get:
+      summary: Retrieve all Containers
+      responses:
+        '200':
+          description: A list of Containers
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Container'
+    post:
+      summary: Create a new Container
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Container'
+      responses:
+        '201':
+          description: Created Container
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Container'
+  /containers/{id}:
+    get:
+      summary: Retrieve a specific Container
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the Container
+      responses:
+        '200':
+          description: A specific Container
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Container'
+    put:
+      summary: Update a specific Container
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the Container
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Container'
+      responses:
+        '200':
+          description: Updated Container
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Container'
+    delete:
+      summary: Delete a specific Container
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the Container
+      responses:
+        '204':
+          description: Container deleted successfully
+  /container-rule-repositories:
+    get:
+      summary: Retrieve all ContainerRuleRepositories
+      responses:
+        '200':
+          description: A list of ContainerRuleRepositories
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ContainerRuleRepository'
+    post:
+      summary: Create a new ContainerRuleRepository
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ContainerRuleRepository'
+      responses:
+        '201':
+          description: Created ContainerRuleRepository
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ContainerRuleRepository'
+  /container-rule-repositories/{id}:
+    get:
+      summary: Retrieve a specific ContainerRuleRepository
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the ContainerRuleRepository
+      responses:
+        '200':
+          description: A specific ContainerRuleRepository
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ContainerRuleRepository'
+    put:
+      summary: Update a specific ContainerRuleRepository
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the ContainerRuleRepository
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ContainerRuleRepository'
+      responses:
+        '200':
+          description: Updated ContainerRuleRepository
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ContainerRuleRepository'
+    delete:
+      summary: Delete a specific ContainerRuleRepository
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the ContainerRuleRepository
+      responses:
+        '204':
+          description: ContainerRuleRepository deleted successfully
+  /container-scan-rules:
+    get:
+      summary: Retrieve all ContainerScanRules
+      responses:
+        '200':
+          description: A list of ContainerScanRules
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ContainerScanRule'
+    post:
+      summary: Create a new ContainerScanRule
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ContainerScanRule'
+      responses:
+        '201':
+          description: Created ContainerScanRule
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ContainerScanRule'
+  /container-scan-rules/{id}:
+    get:
+      summary: Retrieve a specific ContainerScanRule
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the ContainerScanRule
+      responses:
+        '200':
+          description: A specific ContainerScanRule
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ContainerScanRule'
+    put:
+      summary: Update a specific ContainerScanRule
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the ContainerScanRule
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ContainerScanRule'
+      responses:
+        '200':
+          description: Updated ContainerScanRule
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ContainerScanRule'
+    delete:
+      summary: Delete a specific ContainerScanRule
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: The ID of the ContainerScanRule
+      responses:
+        '204':
+          description: ContainerScanRule deleted successfully
+components:
+  schemas:
+    Container:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+          maxLength: 100
+        image_id:
+          type: string
+          maxLength: 100
+        status:
+          type: string
+          maxLength: 50
+          enum:
+            - active
+            - inactive
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+    ContainerRuleRepository:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        repository_name:
+          type: string
+          maxLength: 100
+        description:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+    ContainerScanRule:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        container_id:
+          type: integer
+          format: int64
+        rule_repository_id:
+          type: integer
+          format: int64
+        rule_name:
+          type: string
+          maxLength: 100
+        severity_threshold:
+          type: string
+          maxLength: 50
+          enum:
+            - low
+            - medium
+            - high
+            - critical
+        scan_frequency:
+          type: integer
+          minimum: 1
+        enabled:
+          type: boolean
+          default: true
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
