@@ -1,0 +1,795 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2005 1139" width="2005" height="1139">
+	<title>Class Model (3)</title>
+	<style>
+		tspan { white-space:pre } 
+		.s0 { fill: #ffffff;stroke: #000000 } 
+		.s1 { fill: none;stroke: #000000 } 
+		.t2 { font-size: 14px;fill: #000000;font-family: "Times" } 
+		.s3 { fill: #000000;stroke: #000000 } 
+		.s4 { fill: none;stroke: #000000;stroke-dasharray: 5,2 } 
+	</style>
+	<g id="graph0">
+		<path fill-rule="evenodd" class="s0" d="m1 1138.4v-1138.4h2003v1138.4h-2003z"/>
+		<g id="node1">
+			<path fill-rule="evenodd" class="s1" d="m998 621.6v-22h243v22h-243z"/>
+			<text id="«entity» VulnerabilityDatabase" style="transform: matrix(1,0,0,1,1027.171,614.2)" >
+				<tspan x="0" y="0" class="t2">«entity» VulnerabilityDatabase
+</tspan>
+			</text>
+			<path fill-rule="evenodd" class="s1" d="m998 694.6v-73h243v73h-243z"/>
+			<text id="- id: UUID" style="transform: matrix(1,0,0,1,1001,637.2)" >
+				<tspan x="0" y="0" class="t2">- id: UUID
+</tspan>
+			</text>
+			<text id="- name: String" style="transform: matrix(1,0,0,1,1001,654)" >
+				<tspan x="0" y="0" class="t2">- name: String
+</tspan>
+			</text>
+			<text id="- dateUpdated: Date" style="transform: matrix(1,0,0,1,1001,670.8)" >
+				<tspan x="0" y="0" class="t2">- dateUpdated: Date
+</tspan>
+			</text>
+			<text id="- entries: List&lt;VulnerabilityRecord&gt;" style="transform: matrix(1,0,0,1,1001,687.6)" >
+				<tspan x="0" y="0" class="t2">- entries: List&lt;VulnerabilityRecord&gt;
+</tspan>
+			</text>
+			<path fill-rule="evenodd" class="s1" d="m998 851.6v-157h243v157h-243z"/>
+			<text id="+ addEntry()" style="transform: matrix(1,0,0,1,1001,710.2)" >
+				<tspan x="0" y="0" class="t2">+ addEntry()
+</tspan>
+			</text>
+			<text id="+ deleteEntry()" style="transform: matrix(1,0,0,1,1001,727)" >
+				<tspan x="0" y="0" class="t2">+ deleteEntry()
+</tspan>
+			</text>
+			<text id="+ updateEntry()" style="transform: matrix(1,0,0,1,1001,743.8)" >
+				<tspan x="0" y="0" class="t2">+ updateEntry()
+</tspan>
+			</text>
+			<text id="+ getId(): UUID" style="transform: matrix(1,0,0,1,1001,760.6)" >
+				<tspan x="0" y="0" class="t2">+ getId(): UUID
+</tspan>
+			</text>
+			<text id="+ getName(): String" style="transform: matrix(1,0,0,1,1001,777.4)" >
+				<tspan x="0" y="0" class="t2">+ getName(): String
+</tspan>
+			</text>
+			<text id="+ getDateUpdated(): Date" style="transform: matrix(1,0,0,1,1001,794.2)" >
+				<tspan x="0" y="0" class="t2">+ getDateUpdated(): Date
+</tspan>
+			</text>
+			<text id="+ getEntries(): List&lt;VulnerabilityRecord&gt;" style="transform: matrix(1,0,0,1,1001,811)" >
+				<tspan x="0" y="0" class="t2">+ getEntries(): List&lt;VulnerabilityRecord&gt;
+</tspan>
+			</text>
+			<text id="+ setName(name: String)" style="transform: matrix(1,0,0,1,1001,827.8)" >
+				<tspan x="0" y="0" class="t2">+ setName(name: String)
+</tspan>
+			</text>
+			<text id="+ setDateUpdated(date: Date)" style="transform: matrix(1,0,0,1,1035.872,844.6)" >
+				<tspan x="0" y="0" class="t2">+ setDateUpdated(date: Date)
+</tspan>
+			</text>
+		</g>
+		<g id="node2">
+			<path fill-rule="evenodd" class="s1" d="m1000 934.4v-22h239v22h-239z"/>
+			<text id="«value object» VulnerabilityRecord" style="transform: matrix(1,0,0,1,1014.536,927)" >
+				<tspan x="0" y="0" class="t2">«value object» VulnerabilityRecord
+</tspan>
+			</text>
+			<path fill-rule="evenodd" class="s1" d="m1000 1007.4v-73h239v73h-239z"/>
+			<text id="- id: UUID" style="transform: matrix(1,0,0,1,1003,950)" >
+				<tspan x="0" y="0" class="t2">- id: UUID
+</tspan>
+			</text>
+			<text id="- severity: Severity" style="transform: matrix(1,0,0,1,1003,966.8)" >
+				<tspan x="0" y="0" class="t2">- severity: Severity
+</tspan>
+			</text>
+			<text id="- description: String" style="transform: matrix(1,0,0,1,1003,983.6)" >
+				<tspan x="0" y="0" class="t2">- description: String
+</tspan>
+			</text>
+			<text id="- fixAvailable: Boolean" style="transform: matrix(1,0,0,1,1003,1000.4)" >
+				<tspan x="0" y="0" class="t2">- fixAvailable: Boolean
+</tspan>
+			</text>
+			<path fill-rule="evenodd" class="s1" d="m1000 1130.4v-123h239v123h-239z"/>
+			<text id="+ getId(): UUID" style="transform: matrix(1,0,0,1,1003,1023)" >
+				<tspan x="0" y="0" class="t2">+ getId(): UUID
+</tspan>
+			</text>
+			<text id="+ getSeverity(): Severity" style="transform: matrix(1,0,0,1,1003,1039.8)" >
+				<tspan x="0" y="0" class="t2">+ getSeverity(): Severity
+</tspan>
+			</text>
+			<text id="+ getDescription(): String" style="transform: matrix(1,0,0,1,1003,1056.6)" >
+				<tspan x="0" y="0" class="t2">+ getDescription(): String
+</tspan>
+			</text>
+			<text id="+ isFixAvailable(): Boolean" style="transform: matrix(1,0,0,1,1003,1073.4)" >
+				<tspan x="0" y="0" class="t2">+ isFixAvailable(): Boolean
+</tspan>
+			</text>
+			<text id="+ setSeverity(severity: Severity)" style="transform: matrix(1,0,0,1,1003,1090.2)" >
+				<tspan x="0" y="0" class="t2">+ setSeverity(severity: Severity)
+</tspan>
+			</text>
+			<text id="+ setDescription(description: String)" style="transform: matrix(1,0,0,1,1003,1107)" >
+				<tspan x="0" y="0" class="t2">+ setDescription(description: String)
+</tspan>
+			</text>
+			<text id="+ setFixAvailable(fixAvailable: Boolean)" style="transform: matrix(1,0,0,1,1002.809,1123.8)" >
+				<tspan x="0" y="0" class="t2">+ setFixAvailable(fixAvailable: Boolean)
+</tspan>
+			</text>
+		</g>
+		<g id="edge1">
+			<path class="s1" d="m1119 855.8c0 14.1 0 28.4 0 42.4"/>
+			<path fill-rule="evenodd" class="s3" d="m1122.5 898.3l-3.5 10-3.5-10h7z"/>
+			<text id="1..* contains" style="transform: matrix(1,0,0,1,1154.578,886.2)" >
+				<tspan x="-44.3" y="0" class="t2">1..* contains
+</tspan>
+			</text>
+		</g>
+		<g id="node3">
+			<path fill-rule="evenodd" class="s1" d="m279 300.3v-22h168v22h-168z"/>
+			<text id="«aggregate root» Container" style="transform: matrix(1,0,0,1,281.755,292.9)" >
+				<tspan x="0" y="0" class="t2">«aggregate root» Container
+</tspan>
+			</text>
+			<path fill-rule="evenodd" class="s1" d="m279 373.3v-73h168v73h-168z"/>
+			<text id="- id: UUID" style="transform: matrix(1,0,0,1,282,315.9)" >
+				<tspan x="0" y="0" class="t2">- id: UUID
+</tspan>
+			</text>
+			<text id="- name: String" style="transform: matrix(1,0,0,1,282,332.7)" >
+				<tspan x="0" y="0" class="t2">- name: String
+</tspan>
+			</text>
+			<text id="- status: Status" style="transform: matrix(1,0,0,1,282,349.5)" >
+				<tspan x="0" y="0" class="t2">- status: Status
+</tspan>
+			</text>
+			<text id="- image: String" style="transform: matrix(1,0,0,1,282,366.3)" >
+				<tspan x="0" y="0" class="t2">- image: String
+</tspan>
+			</text>
+			<path fill-rule="evenodd" class="s1" d="m279 530.3v-157h168v157h-168z"/>
+			<text id="+ access()" style="transform: matrix(1,0,0,1,282,388.9)" >
+				<tspan x="0" y="0" class="t2">+ access()
+</tspan>
+			</text>
+			<text id="+ scan()" style="transform: matrix(1,0,0,1,282,405.7)" >
+				<tspan x="0" y="0" class="t2">+ scan()
+</tspan>
+			</text>
+			<text id="+ getId(): UUID" style="transform: matrix(1,0,0,1,282,422.5)" >
+				<tspan x="0" y="0" class="t2">+ getId(): UUID
+</tspan>
+			</text>
+			<text id="+ getName(): String" style="transform: matrix(1,0,0,1,282,439.3)" >
+				<tspan x="0" y="0" class="t2">+ getName(): String
+</tspan>
+			</text>
+			<text id="+ getStatus(): Status" style="transform: matrix(1,0,0,1,282,456.1)" >
+				<tspan x="0" y="0" class="t2">+ getStatus(): Status
+</tspan>
+			</text>
+			<text id="+ getImage(): String" style="transform: matrix(1,0,0,1,282,472.9)" >
+				<tspan x="0" y="0" class="t2">+ getImage(): String
+</tspan>
+			</text>
+			<text id="+ setName(name: String)" style="transform: matrix(1,0,0,1,282,489.7)" >
+				<tspan x="0" y="0" class="t2">+ setName(name: String)
+</tspan>
+			</text>
+			<text id="+ setStatus(status: Status)" style="transform: matrix(1,0,0,1,282,506.5)" >
+				<tspan x="0" y="0" class="t2">+ setStatus(status: Status)
+</tspan>
+			</text>
+			<text id="+ setImage(image: String)" style="transform: matrix(1,0,0,1,282,523.3)" >
+				<tspan x="0" y="0" class="t2">+ setImage(image: String)
+</tspan>
+			</text>
+		</g>
+		<g id="node4">
+			<path fill-rule="evenodd" class="s1" d="m238 647.6v-22h251v22h-251z"/>
+			<text id="«value object» ContainerScanRule" style="transform: matrix(1,0,0,1,261.644,640.2)" >
+				<tspan x="0" y="0" class="t2">«value object» ContainerScanRule
+</tspan>
+			</text>
+			<path fill-rule="evenodd" class="s1" d="m238 703.6v-56h251v56h-251z"/>
+			<text id="- ruleId: UUID" style="transform: matrix(1,0,0,1,241,663.2)" >
+				<tspan x="0" y="0" class="t2">- ruleId: UUID
+</tspan>
+			</text>
+			<text id="- severityThreshold: Severity" style="transform: matrix(1,0,0,1,241,680)" >
+				<tspan x="0" y="0" class="t2">- severityThreshold: Severity
+</tspan>
+			</text>
+			<text id="- scanFrequency: Frequency" style="transform: matrix(1,0,0,1,243.342,696.8)" >
+				<tspan x="0" y="0" class="t2">- scanFrequency: Frequency
+</tspan>
+			</text>
+			<path fill-rule="evenodd" class="s1" d="m238 826.6v-123h251v123h-251z"/>
+			<text id="+ evaluate()" style="transform: matrix(1,0,0,1,241,719.2)" >
+				<tspan x="0" y="0" class="t2">+ evaluate()
+</tspan>
+			</text>
+			<text id="+ revise()" style="transform: matrix(1,0,0,1,241,736)" >
+				<tspan x="0" y="0" class="t2">+ revise()
+</tspan>
+			</text>
+			<text id="+ getRuleId(): UUID" style="transform: matrix(1,0,0,1,241,752.8)" >
+				<tspan x="0" y="0" class="t2">+ getRuleId(): UUID
+</tspan>
+			</text>
+			<text id="+ getSeverityThreshold(): Severity" style="transform: matrix(1,0,0,1,241,769.6)" >
+				<tspan x="0" y="0" class="t2">+ getSeverityThreshold(): Severity
+</tspan>
+			</text>
+			<text id="+ getScanFrequency(): Frequency" style="transform: matrix(1,0,0,1,241,786.4)" >
+				<tspan x="0" y="0" class="t2">+ getScanFrequency(): Frequency
+</tspan>
+			</text>
+			<text id="+ setSeverityThreshold(severity: Severity)" style="transform: matrix(1,0,0,1,241,803.2)" >
+				<tspan x="0" y="0" class="t2">+ setSeverityThreshold(severity: Severity)
+</tspan>
+			</text>
+			<text id="+ setScanFrequency(frequency: Frequency)" style="transform: matrix(1,0,0,1,240.996,820)" >
+				<tspan x="0" y="0" class="t2">+ setScanFrequency(frequency: Frequency)
+</tspan>
+			</text>
+		</g>
+		<g id="edge3">
+			<path class="s1" d="m363 534.5c0 25.3 0 51.7 0 76.4"/>
+			<path fill-rule="evenodd" class="s3" d="m366.5 611.1l-3.5 10-3.5-10h7z"/>
+			<text id="1..* applies" style="transform: matrix(1,0,0,1,395.077,573.4)" >
+				<tspan x="-39.6" y="0" class="t2">1..* applies
+</tspan>
+			</text>
+		</g>
+		<g id="node5">
+			<path fill-rule="evenodd" class="s1" d="m599 292.3v-22h212v22h-212z"/>
+			<text id="«entity» ScanTask" style="transform: matrix(1,0,0,1,648.434,284.9)" >
+				<tspan x="0" y="0" class="t2">«entity» ScanTask
+</tspan>
+			</text>
+			<path fill-rule="evenodd" class="s1" d="m599 382.3v-90h212v90h-212z"/>
+			<text id="- taskId: UUID" style="transform: matrix(1,0,0,1,602,307.9)" >
+				<tspan x="0" y="0" class="t2">- taskId: UUID
+</tspan>
+			</text>
+			<text id="- container: Container" style="transform: matrix(1,0,0,1,602,324.7)" >
+				<tspan x="0" y="0" class="t2">- container: Container
+</tspan>
+			</text>
+			<text id="- startTime: DateTime" style="transform: matrix(1,0,0,1,602,341.5)" >
+				<tspan x="0" y="0" class="t2">- startTime: DateTime
+</tspan>
+			</text>
+			<text id="- result: ScanResult" style="transform: matrix(1,0,0,1,602,358.3)" >
+				<tspan x="0" y="0" class="t2">- result: ScanResult
+</tspan>
+			</text>
+			<text id="- status: ScanStatus" style="transform: matrix(1,0,0,1,610.152,375.1)" >
+				<tspan x="0" y="0" class="t2">- status: ScanStatus
+</tspan>
+			</text>
+			<path fill-rule="evenodd" class="s1" d="m599 539.3v-157h212v157h-212z"/>
+			<text id="+ execute()" style="transform: matrix(1,0,0,1,602,397.9)" >
+				<tspan x="0" y="0" class="t2">+ execute()
+</tspan>
+			</text>
+			<text id="+ generateReport()" style="transform: matrix(1,0,0,1,602,414.7)" >
+				<tspan x="0" y="0" class="t2">+ generateReport()
+</tspan>
+			</text>
+			<text id="+ getTaskId(): UUID" style="transform: matrix(1,0,0,1,602,431.5)" >
+				<tspan x="0" y="0" class="t2">+ getTaskId(): UUID
+</tspan>
+			</text>
+			<text id="+ getContainer(): Container" style="transform: matrix(1,0,0,1,602,448.3)" >
+				<tspan x="0" y="0" class="t2">+ getContainer(): Container
+</tspan>
+			</text>
+			<text id="+ getStartTime(): DateTime" style="transform: matrix(1,0,0,1,602,465.1)" >
+				<tspan x="0" y="0" class="t2">+ getStartTime(): DateTime
+</tspan>
+			</text>
+			<text id="+ getResult(): ScanResult" style="transform: matrix(1,0,0,1,602,481.9)" >
+				<tspan x="0" y="0" class="t2">+ getResult(): ScanResult
+</tspan>
+			</text>
+			<text id="+ setContainer(container: Container)" style="transform: matrix(1,0,0,1,602,498.7)" >
+				<tspan x="0" y="0" class="t2">+ setContainer(container: Container)
+</tspan>
+			</text>
+			<text id="+ setResult(result: ScanResult)" style="transform: matrix(1,0,0,1,602,515.5)" >
+				<tspan x="0" y="0" class="t2">+ setResult(result: ScanResult)
+</tspan>
+			</text>
+			<text id="+ setStatus(status: ScanStatus)" style="transform: matrix(1,0,0,1,619.4,532.3)" >
+				<tspan x="0" y="0" class="t2">+ setStatus(status: ScanStatus)
+</tspan>
+			</text>
+		</g>
+		<g id="node7">
+			<path fill-rule="evenodd" class="s1" d="m581 655.6v-22h322v22h-322z"/>
+			<text id="«value object» ScanResult" style="transform: matrix(1,0,0,1,663.08,648.2)" >
+				<tspan x="0" y="0" class="t2">«value object» ScanResult
+</tspan>
+			</text>
+			<path fill-rule="evenodd" class="s1" d="m581 711.6v-56h322v56h-322z"/>
+			<text id="- vulnerabilitiesFound: List&lt;VulnerabilityRecord&gt;" style="transform: matrix(1,0,0,1,584,671.2)" >
+				<tspan x="0" y="0" class="t2">- vulnerabilitiesFound: List&lt;VulnerabilityRecord&gt;
+</tspan>
+			</text>
+			<text id="- severity: Severity" style="transform: matrix(1,0,0,1,584,688)" >
+				<tspan x="0" y="0" class="t2">- severity: Severity
+</tspan>
+			</text>
+			<text id="- summary: String" style="transform: matrix(1,0,0,1,675.097,704.8)" >
+				<tspan x="0" y="0" class="t2">- summary: String
+</tspan>
+			</text>
+			<path fill-rule="evenodd" class="s1" d="m581 817.6v-106h322v106h-322z"/>
+			<text id="+ analyze()" style="transform: matrix(1,0,0,1,584,727.2)" >
+				<tspan x="0" y="0" class="t2">+ analyze()
+</tspan>
+			</text>
+			<text id="+ getVulnerabilitiesFound(): List&lt;VulnerabilityRecord&gt;" style="transform: matrix(1,0,0,1,584,744)" >
+				<tspan x="0" y="0" class="t2">+ getVulnerabilitiesFound(): List&lt;VulnerabilityRecord&gt;
+</tspan>
+			</text>
+			<text id="+ getSeverity(): Severity" style="transform: matrix(1,0,0,1,584,760.8)" >
+				<tspan x="0" y="0" class="t2">+ getSeverity(): Severity
+</tspan>
+			</text>
+			<text id="+ getSummary(): String" style="transform: matrix(1,0,0,1,584,777.6)" >
+				<tspan x="0" y="0" class="t2">+ getSummary(): String
+</tspan>
+			</text>
+			<text id="+ setSeverity(severity: Severity)" style="transform: matrix(1,0,0,1,584,794.4)" >
+				<tspan x="0" y="0" class="t2">+ setSeverity(severity: Severity)
+</tspan>
+			</text>
+			<text id="+ setSummary(summary: String)" style="transform: matrix(1,0,0,1,649.79,811.2)" >
+				<tspan x="0" y="0" class="t2">+ setSummary(summary: String)
+</tspan>
+			</text>
+		</g>
+		<g id="edge4">
+			<path class="s1" d="m721 542.9c2.9 25.7 6 52.1 8.8 76.6"/>
+			<path fill-rule="evenodd" class="s3" d="m733.3 619.2l-2.4 10.3-4.6-9.5 7-0.8z"/>
+			<text id="1..1 has" style="transform: matrix(1,0,0,1,746.58,573.4)" >
+				<tspan x="-28" y="0" class="t2">1..1 has
+</tspan>
+			</text>
+		</g>
+		<g id="node6">
+			<path fill-rule="evenodd" class="s1" d="m1562 83.5v-22h178v22h-178z"/>
+			<text id="«enum» ScanStatus" style="transform: matrix(1,0,0,1,1591.319,76.1)" >
+				<tspan x="0" y="0" class="t2">«enum» ScanStatus
+</tspan>
+			</text>
+			<path fill-rule="evenodd" class="s1" d="m1562 156.5v-73h178v73h-178z"/>
+			<text id="+ PENDING: ScanStatus" style="transform: matrix(1,0,0,1,1565,99.1)" >
+				<tspan x="0" y="0" class="t2">+ PENDING: ScanStatus
+</tspan>
+			</text>
+			<text id="+ IN_PROGRESS: ScanStatus" style="transform: matrix(1,0,0,1,1565,115.9)" >
+				<tspan x="0" y="0" class="t2">+ IN_PROGRESS: ScanStatus
+</tspan>
+			</text>
+			<text id="+ COMPLETED: ScanStatus" style="transform: matrix(1,0,0,1,1565,132.7)" >
+				<tspan x="0" y="0" class="t2">+ COMPLETED: ScanStatus
+</tspan>
+			</text>
+			<text id="+ FAILED: ScanStatus" style="transform: matrix(1,0,0,1,1586.009,149.5)" >
+				<tspan x="0" y="0" class="t2">+ FAILED: ScanStatus
+</tspan>
+			</text>
+		</g>
+		<g id="edge2">
+			<path class="s1" d="m864.4 821.6c37.9 29.8 80 62.8 118.8 93.2"/>
+			<path fill-rule="evenodd" class="s3" d="m985.7 912.3l5.7 9-10-3.4 4.3-5.6z"/>
+			<text id="1..* aggregates" style="transform: matrix(1,0,0,1,984.177,886.2)" >
+				<tspan x="-54.3" y="0" class="t2">1..* aggregates
+</tspan>
+			</text>
+		</g>
+		<g id="node8">
+			<path fill-rule="evenodd" class="s1" d="m1774 30.5v-22h218v22h-218z"/>
+			<text id="«entity» AssessmentRule" style="transform: matrix(1,0,0,1,1807.378,23.1)" >
+				<tspan x="0" y="0" class="t2">«entity» AssessmentRule
+</tspan>
+			</text>
+			<path fill-rule="evenodd" class="s1" d="m1774 86.5v-56h218v56h-218z"/>
+			<text id="- ruleId: UUID" style="transform: matrix(1,0,0,1,1777,46.1)" >
+				<tspan x="0" y="0" class="t2">- ruleId: UUID
+</tspan>
+			</text>
+			<text id="- criteria: String" style="transform: matrix(1,0,0,1,1777,62.9)" >
+				<tspan x="0" y="0" class="t2">- criteria: String
+</tspan>
+			</text>
+			<text id="- severityLimit: Severity" style="transform: matrix(1,0,0,1,1777,79.7)" >
+				<tspan x="0" y="0" class="t2">- severityLimit: Severity
+</tspan>
+			</text>
+			<path fill-rule="evenodd" class="s1" d="m1774 209.5v-123h218v123h-218z"/>
+			<text id="+ evaluateContainer()" style="transform: matrix(1,0,0,1,1777,102.1)" >
+				<tspan x="0" y="0" class="t2">+ evaluateContainer()
+</tspan>
+			</text>
+			<text id="+ reviseRule()" style="transform: matrix(1,0,0,1,1777,118.9)" >
+				<tspan x="0" y="0" class="t2">+ reviseRule()
+</tspan>
+			</text>
+			<text id="+ getRuleId(): UUID" style="transform: matrix(1,0,0,1,1777,135.7)" >
+				<tspan x="0" y="0" class="t2">+ getRuleId(): UUID
+</tspan>
+			</text>
+			<text id="+ getCriteria(): String" style="transform: matrix(1,0,0,1,1777,152.5)" >
+				<tspan x="0" y="0" class="t2">+ getCriteria(): String
+</tspan>
+			</text>
+			<text id="+ getSeverityLimit(): Severity" style="transform: matrix(1,0,0,1,1777,169.3)" >
+				<tspan x="0" y="0" class="t2">+ getSeverityLimit(): Severity
+</tspan>
+			</text>
+			<text id="+ setCriteria(criteria: String)" style="transform: matrix(1,0,0,1,1777,186.1)" >
+				<tspan x="0" y="0" class="t2">+ setCriteria(criteria: String)
+</tspan>
+			</text>
+			<text id="+ setSeverityLimit(severity: Severity)" style="transform: matrix(1,0,0,1,1776.803,202.9)" >
+				<tspan x="0" y="0" class="t2">+ setSeverityLimit(severity: Severity)
+</tspan>
+			</text>
+		</g>
+		<g id="node9">
+			<path fill-rule="evenodd" class="s1" d="m433 91.5v-22h240v22h-240z"/>
+			<text id="«service» ScanningService" style="transform: matrix(1,0,0,1,472.73,84.1)" >
+				<tspan x="0" y="0" class="t2">«service» ScanningService
+</tspan>
+			</text>
+			<path fill-rule="evenodd" class="s1" d="m433 147.5v-56h240v56h-240z"/>
+			<text id="+ scan(container: Container)" style="transform: matrix(1,0,0,1,436,107.1)" >
+				<tspan x="0" y="0" class="t2">+ scan(container: Container)
+</tspan>
+			</text>
+			<text id="+ scheduleScan(rule: ContainerScanRule)" style="transform: matrix(1,0,0,1,436,123.9)" >
+				<tspan x="0" y="0" class="t2">+ scheduleScan(rule: ContainerScanRule)
+</tspan>
+			</text>
+			<text id="+ generateReport(task: ScanTask)" style="transform: matrix(1,0,0,1,457.704,140.7)" >
+				<tspan x="0" y="0" class="t2">+ generateReport(task: ScanTask)
+</tspan>
+			</text>
+		</g>
+		<g id="edge5">
+			<path class="s1" d="m486.6 151.8c-27.4 20.9-57.3 48.2-76.9 79.2-6.6 10.5-12.3 21.9-17.2 33.7"/>
+			<path fill-rule="evenodd" class="s3" d="m395.7 266.3l-6.9 8 0.4-10.6 6.5 2.6z"/>
+			<text id="1..1 handles" style="transform: matrix(1,0,0,1,443.632,243.6)" >
+				<tspan x="-43.1" y="0" class="t2">1..1 handles
+</tspan>
+			</text>
+		</g>
+		<g id="edge7">
+			<path class="s1" d="m535.9 151.6c-11.7 31.2-26.8 74.8-35.9 114.2-28 121 2.7 159-36 277-7.6 23.2-18.2 46.8-29.6 69"/>
+			<path fill-rule="evenodd" class="s3" d="m437.3 613.7l-7.7 7.2 1.5-10.5 6.2 3.3z"/>
+			<text id="1..1 references" style="transform: matrix(1,0,0,1,542,408.5)" >
+				<tspan x="-52.7" y="0" class="t2">1..1 references
+</tspan>
+			</text>
+		</g>
+		<g id="edge6">
+			<path class="s1" d="m575.1 151.5c14.4 28 34.1 66.4 53.9 104.8"/>
+			<path fill-rule="evenodd" class="s3" d="m632.3 255.1l1.4 10.5-7.7-7.3 6.3-3.2z"/>
+			<text id="1..1 initiates" style="transform: matrix(1,0,0,1,659.413,243.6)" >
+				<tspan x="-43.6" y="0" class="t2">1..1 initiates
+</tspan>
+			</text>
+		</g>
+		<g id="node12">
+			<path fill-rule="evenodd" class="s1" d="m845 387.3v-22h276v22h-276z"/>
+			<text id="«repository» VulnerabilityDatabaseRepository" style="transform: matrix(1,0,0,1,847.515,379.9)" >
+				<tspan x="0" y="0" class="t2">«repository» VulnerabilityDatabaseRepository
+</tspan>
+			</text>
+			<path fill-rule="evenodd" class="s1" d="m845 443.3v-56h276v56h-276z"/>
+			<text id="+ findById(id: UUID)" style="transform: matrix(1,0,0,1,848,402.9)" >
+				<tspan x="0" y="0" class="t2">+ findById(id: UUID)
+</tspan>
+			</text>
+			<text id="+ save(database: VulnerabilityDatabase)" style="transform: matrix(1,0,0,1,848,419.7)" >
+				<tspan x="0" y="0" class="t2">+ save(database: VulnerabilityDatabase)
+</tspan>
+			</text>
+			<text id="+ delete(id: UUID)" style="transform: matrix(1,0,0,1,907.861,436.5)" >
+				<tspan x="0" y="0" class="t2">+ delete(id: UUID)
+</tspan>
+			</text>
+		</g>
+		<g id="edge17">
+			<path class="s4" d="m638.9 151.6c55.7 29.4 128.9 70.8 189.1 114.2 36.8 26.5 74.9 60.4 104.1 88"/>
+			<path fill-rule="evenodd" class="s3" d="m934.8 351.6l4.9 9.5-9.7-4.4 4.8-5.1z"/>
+		</g>
+		<g id="node10">
+			<path fill-rule="evenodd" class="s1" d="m1242 91.5v-22h286v22h-286z"/>
+			<text id="«service» AlertService" style="transform: matrix(1,0,0,1,1316.399,84.1)" >
+				<tspan x="0" y="0" class="t2">«service» AlertService
+</tspan>
+			</text>
+			<path fill-rule="evenodd" class="s1" d="m1242 147.5v-56h286v56h-286z"/>
+			<text id="+ notify(engineer: Person, message: String)" style="transform: matrix(1,0,0,1,1245,107.1)" >
+				<tspan x="0" y="0" class="t2">+ notify(engineer: Person, message: String)
+</tspan>
+			</text>
+			<text id="+ triggerAlert(vulnerability: VulnerabilityRecord)" style="transform: matrix(1,0,0,1,1245,123.9)" >
+				<tspan x="0" y="0" class="t2">+ triggerAlert(vulnerability: VulnerabilityRecord)
+</tspan>
+			</text>
+			<text id="+ sendCriticalAlert(severity: Severity)" style="transform: matrix(1,0,0,1,1277.257,140.7)" >
+				<tspan x="0" y="0" class="t2">+ sendCriticalAlert(severity: Severity)
+</tspan>
+			</text>
+		</g>
+		<g id="edge8">
+			<path class="s1" d="m1375 151.8c-7.2 31.5-16.7 75.3-24 114-48.9 260.9 15.8 348.1-94 589.8-6.9 15.1-15.5 30-25 44.2"/>
+			<path fill-rule="evenodd" class="s3" d="m1234.8 901.8l-8.6 6.3 2.8-10.2 5.8 3.9z"/>
+			<text id="1..1 triggers" style="transform: matrix(1,0,0,1,1360.631,573.4)" >
+				<tspan x="-42.9" y="0" class="t2">1..1 triggers
+</tspan>
+			</text>
+		</g>
+		<g id="node11">
+			<path fill-rule="evenodd" class="s1" d="m1156 359.3v-22h135v22h-135z"/>
+			<text id="«entity» AuditLog" style="transform: matrix(1,0,0,1,1166.926,351.9)" >
+				<tspan x="0" y="0" class="t2">«entity» AuditLog
+</tspan>
+			</text>
+			<path fill-rule="evenodd" class="s1" d="m1156 432.3v-73h135v73h-135z"/>
+			<text id="- logId: UUID" style="transform: matrix(1,0,0,1,1159,374.9)" >
+				<tspan x="0" y="0" class="t2">- logId: UUID
+</tspan>
+			</text>
+			<text id="- eventType: String" style="transform: matrix(1,0,0,1,1159,391.7)" >
+				<tspan x="0" y="0" class="t2">- eventType: String
+</tspan>
+			</text>
+			<text id="- timestamp: DateTime" style="transform: matrix(1,0,0,1,1159,408.5)" >
+				<tspan x="0" y="0" class="t2">- timestamp: DateTime
+</tspan>
+			</text>
+			<text id="- details: String" style="transform: matrix(1,0,0,1,1180.339,425.3)" >
+				<tspan x="0" y="0" class="t2">- details: String
+</tspan>
+			</text>
+			<path fill-rule="evenodd" class="s1" d="m1156 471.3v-39h135v39h-135z"/>
+			<text id="+ createLog()" style="transform: matrix(1,0,0,1,1159,447.9)" >
+				<tspan x="0" y="0" class="t2">+ createLog()
+</tspan>
+			</text>
+			<text id="+ getLogs()" style="transform: matrix(1,0,0,1,1164.43,464.7)" >
+				<tspan x="0" y="0" class="t2">+ getLogs()
+</tspan>
+			</text>
+		</g>
+		<g id="edge18">
+			<path class="s1" d="m1331.4 151.5c-23.5 21.6-49.6 49.5-66.2 79.5-15.6 28.1-25.5 61.9-31.7 92.1"/>
+			<path fill-rule="evenodd" class="s3" d="m1236.8 324.1l-5.3 9.2-1.5-10.5 6.8 1.3z"/>
+			<text id="1..* logs" style="transform: matrix(1,0,0,1,1289.918,243.6)" >
+				<tspan x="-28.9" y="0" class="t2">1..* logs
+</tspan>
+			</text>
+		</g>
+		<g id="node14">
+			<path fill-rule="evenodd" class="s1" d="m1369 334.3v-22h149v22h-149z"/>
+			<text id="«abstract entity» Person" style="transform: matrix(1,0,0,1,1371.58,326.9)" >
+				<tspan x="0" y="0" class="t2">«abstract entity» Person
+</tspan>
+			</text>
+			<path fill-rule="evenodd" class="s1" d="m1369 390.3v-56h149v56h-149z"/>
+			<text id="+ id: UUID" style="transform: matrix(1,0,0,1,1372,349.9)" >
+				<tspan x="0" y="0" class="t2">+ id: UUID
+</tspan>
+			</text>
+			<text id="+ name: String" style="transform: matrix(1,0,0,1,1372,366.7)" >
+				<tspan x="0" y="0" class="t2">+ name: String
+</tspan>
+			</text>
+			<text id="+ email: String" style="transform: matrix(1,0,0,1,1372,383.5)" >
+				<tspan x="0" y="0" class="t2">+ email: String
+</tspan>
+			</text>
+			<path fill-rule="evenodd" class="s1" d="m1369 496.3v-106h149v106h-149z"/>
+			<text id="+ notify()" style="transform: matrix(1,0,0,1,1372,405.9)" >
+				<tspan x="0" y="0" class="t2">+ notify()
+</tspan>
+			</text>
+			<text id="+ getId(): UUID" style="transform: matrix(1,0,0,1,1372,422.7)" >
+				<tspan x="0" y="0" class="t2">+ getId(): UUID
+</tspan>
+			</text>
+			<text id="+ getName(): String" style="transform: matrix(1,0,0,1,1372,439.5)" >
+				<tspan x="0" y="0" class="t2">+ getName(): String
+</tspan>
+			</text>
+			<text id="+ getEmail(): String" style="transform: matrix(1,0,0,1,1372,456.3)" >
+				<tspan x="0" y="0" class="t2">+ getEmail(): String
+</tspan>
+			</text>
+			<text id="+ setName(name: String)" style="transform: matrix(1,0,0,1,1372,473.1)" >
+				<tspan x="0" y="0" class="t2">+ setName(name: String)
+</tspan>
+			</text>
+			<text id="+ setEmail(email: String)" style="transform: matrix(1,0,0,1,1372,489.9)" >
+				<tspan x="0" y="0" class="t2">+ setEmail(email: String)
+</tspan>
+			</text>
+		</g>
+		<g id="edge9">
+			<path class="s1" d="m1393.4 151.5c7.5 38.3 18.8 96 28.8 146.5"/>
+			<path fill-rule="evenodd" class="s3" d="m1425.6 297.6l-1.5 10.4-5.3-9.1 6.8-1.3z"/>
+			<text id="0..* notifies" style="transform: matrix(1,0,0,1,1446.246,243.6)" >
+				<tspan x="-40.4" y="0" class="t2">0..* notifies
+</tspan>
+			</text>
+		</g>
+		<g id="node18">
+			<path fill-rule="evenodd" class="s1" d="m1552 379.3v-22h135v22h-135z"/>
+			<text id="«enum» Severity" style="transform: matrix(1,0,0,1,1567.21,371.9)" >
+				<tspan x="0" y="0" class="t2">«enum» Severity
+</tspan>
+			</text>
+			<path fill-rule="evenodd" class="s1" d="m1552 452.3v-73h135v73h-135z"/>
+			<text id="+ LOW: Severity" style="transform: matrix(1,0,0,1,1555,394.9)" >
+				<tspan x="0" y="0" class="t2">+ LOW: Severity
+</tspan>
+			</text>
+			<text id="+ MEDIUM: Severity" style="transform: matrix(1,0,0,1,1555,411.7)" >
+				<tspan x="0" y="0" class="t2">+ MEDIUM: Severity
+</tspan>
+			</text>
+			<text id="+ HIGH: Severity" style="transform: matrix(1,0,0,1,1555,428.5)" >
+				<tspan x="0" y="0" class="t2">+ HIGH: Severity
+</tspan>
+			</text>
+			<text id="+ CRITICAL: Severity" style="transform: matrix(1,0,0,1,1554.509,445.3)" >
+				<tspan x="0" y="0" class="t2">+ CRITICAL: Severity
+</tspan>
+			</text>
+		</g>
+		<g id="edge10">
+			<path class="s1" d="m1430.6 151.7c31 30.4 71.8 72.9 103.4 114.1 18.7 24.4 36.9 53.2 51.7 78.2"/>
+			<path fill-rule="evenodd" class="s3" d="m1588.7 342.2l2 10.4-8-6.8 6-3.6z"/>
+			<text id="1..* criticality" style="transform: matrix(1,0,0,1,1559.074,243.6)" >
+				<tspan x="-46.9" y="0" class="t2">1..* criticality
+</tspan>
+			</text>
+		</g>
+		<g id="edge16">
+			<path class="s1" d="m1199.9 475.6c-10.5 32.5-23.3 72.1-35.6 110.1"/>
+			<path fill-rule="evenodd" class="s3" d="m1167.6 586.9l-6.4 8.4-0.3-10.6 6.7 2.2z"/>
+			<text id="1..* logs" style="transform: matrix(1,0,0,1,1194.918,573.4)" >
+				<tspan x="-28.9" y="0" class="t2">1..* logs
+</tspan>
+			</text>
+		</g>
+		<g id="edge11">
+			<path class="s1" d="m1001.3 447.6c15.2 35.7 37.5 88.5 58.6 138.4"/>
+			<path fill-rule="evenodd" class="s3" d="m1063.2 584.8l0.7 10.5-7.2-7.8 6.5-2.7z"/>
+			<text id="1..1 stores" style="transform: matrix(1,0,0,1,1084.578,573.4)" >
+				<tspan x="-36.9" y="0" class="t2">1..1 stores
+</tspan>
+			</text>
+		</g>
+		<g id="node13">
+			<path fill-rule="evenodd" class="s1" d="m13 387.3v-22h232v22h-232z"/>
+			<text id="«repository» ContainerRuleRepository" style="transform: matrix(1,0,0,1,15.665,379.9)" >
+				<tspan x="0" y="0" class="t2">«repository» ContainerRuleRepository
+</tspan>
+			</text>
+			<path fill-rule="evenodd" class="s1" d="m13 443.3v-56h232v56h-232z"/>
+			<text id="+ findById(id: UUID)" style="transform: matrix(1,0,0,1,16,402.9)" >
+				<tspan x="0" y="0" class="t2">+ findById(id: UUID)
+</tspan>
+			</text>
+			<text id="+ save(rule: ContainerScanRule)" style="transform: matrix(1,0,0,1,16,419.7)" >
+				<tspan x="0" y="0" class="t2">+ save(rule: ContainerScanRule)
+</tspan>
+			</text>
+			<text id="+ delete(id: UUID)" style="transform: matrix(1,0,0,1,54.102,436.5)" >
+				<tspan x="0" y="0" class="t2">+ delete(id: UUID)
+</tspan>
+			</text>
+		</g>
+		<g id="edge12">
+			<path class="s1" d="m160.6 447.6c30.6 42.2 78.5 107.9 120.1 164.9"/>
+			<path fill-rule="evenodd" class="s3" d="m283.7 610.7l3 10.2-8.7-6 5.7-4.2z"/>
+			<text id="1..1 manages" style="transform: matrix(1,0,0,1,290.74,573.4)" >
+				<tspan x="-47.8" y="0" class="t2">1..1 manages
+</tspan>
+			</text>
+		</g>
+		<g id="node15">
+			<path fill-rule="evenodd" class="s1" d="m1722 717.6v-22h228v22h-228z"/>
+			<text id="«role» InformationSecurityEngine" style="transform: matrix(1,0,0,1,1724.619,710.2)" >
+				<tspan x="0" y="0" class="t2">«</tspan><tspan  y="0" class="t2">r</tspan><tspan  y="0" class="t2">o</tspan><tspan  y="0" class="t2">l</tspan><tspan  y="0" class="t2">e</tspan><tspan  y="0" class="t2">» InformationSecurityEngineer
+</tspan>
+			</text>
+			<path fill-rule="evenodd" class="s1" d="m1722 756.6v-39h228v39h-228z"/>
+			<text id="+ configureVulnerabilityDatabase()" style="transform: matrix(1,0,0,1,1725,733.2)" >
+				<tspan x="0" y="0" class="t2">+ configureVulnerabilityDatabase()
+</tspan>
+			</text>
+			<text id="+ manageScanRules()" style="transform: matrix(1,0,0,1,1763.479,750)" >
+				<tspan x="0" y="0" class="t2">+ manageScanRules()
+</tspan>
+			</text>
+		</g>
+		<g id="edge13">
+			<path class="s1" d="m1493.4 500.4c11.6 15.8 25.2 30.8 40.6 42.4 7.9 6 162.5 47.7 171 52.8 38.2 22.9 73.5 59.2 97.8 87.7"/>
+			<path fill-rule="evenodd" class="s3" d="m1805.6 681.2l3.8 9.9-9.1-5.4 5.3-4.5z"/>
+			<text id="0..1 role" style="transform: matrix(1,0,0,1,1666.133,573.4)" >
+				<tspan x="-28.8" y="0" class="t2">0..1 role
+</tspan>
+			</text>
+		</g>
+		<g id="node16">
+			<path fill-rule="evenodd" class="s1" d="m1363 708.6v-22h161v22h-161z"/>
+			<text id="«role» DevOpsEngineer" style="transform: matrix(1,0,0,1,1365.944,701.2)" >
+				<tspan x="0" y="0" class="t2">«</tspan><tspan  y="0" class="t2">r</tspan><tspan  y="0" class="t2">o</tspan><tspan  y="0" class="t2">l</tspan><tspan  y="0" class="t2">e</tspan><tspan  y="0" class="t2">» DevOpsEngineer
+</tspan>
+			</text>
+			<path fill-rule="evenodd" class="s1" d="m1363 764.6v-56h161v56h-161z"/>
+			<text id="+ manageDeployment()" style="transform: matrix(1,0,0,1,1366,724.2)" >
+				<tspan x="0" y="0" class="t2">+ manageDeployment()
+</tspan>
+			</text>
+			<text id="+ performContainerScan()" style="transform: matrix(1,0,0,1,1366,741)" >
+				<tspan x="0" y="0" class="t2">+ performContainerScan()
+</tspan>
+			</text>
+			<text id="+ setAlerts()" style="transform: matrix(1,0,0,1,1404.874,757.8)" >
+				<tspan x="0" y="0" class="t2">+ setAlerts()
+</tspan>
+			</text>
+		</g>
+		<g id="edge14">
+			<path class="s1" d="m1443 500.7c0 56.2 0 124.9 0 171.5"/>
+			<path fill-rule="evenodd" class="s3" d="m1446.5 672.4l-3.5 10-3.5-10h7z"/>
+			<text id="0..1 role" style="transform: matrix(1,0,0,1,1466.133,573.4)" >
+				<tspan x="-28.8" y="0" class="t2">0..1 role
+</tspan>
+			</text>
+		</g>
+		<g id="node17">
+			<path fill-rule="evenodd" class="s1" d="m1558 717.6v-22h130v22h-130z"/>
+			<text id="«role» Developer" style="transform: matrix(1,0,0,1,1564.495,710.2)" >
+				<tspan x="0" y="0" class="t2">«</tspan><tspan  y="0" class="t2">r</tspan><tspan  y="0" class="t2">o</tspan><tspan  y="0" class="t2">l</tspan><tspan  y="0" class="t2">e</tspan><tspan  y="0" class="t2">» Developer
+</tspan>
+			</text>
+			<path fill-rule="evenodd" class="s1" d="m1558 756.6v-39h130v39h-130z"/>
+			<text id="+ fixVulnerability()" style="transform: matrix(1,0,0,1,1561,733.2)" >
+				<tspan x="0" y="0" class="t2">+ fixVulnerability()
+</tspan>
+			</text>
+			<text id="+ reviewScanReport()" style="transform: matrix(1,0,0,1,1560.941,750)" >
+				<tspan x="0" y="0" class="t2">+ reviewScanReport()
+</tspan>
+			</text>
+		</g>
+		<g id="edge15">
+			<path class="s1" d="m1497 500.7c33.8 60.3 75.7 135.1 101.6 181.4"/>
+			<path fill-rule="evenodd" class="s3" d="m1601.8 680.5l1.8 10.5-7.9-7.1 6.1-3.4z"/>
+			<text id="0..1 role" style="transform: matrix(1,0,0,1,1562.133,573.4)" >
+				<tspan x="-28.8" y="0" class="t2">0..1 role
+</tspan>
+			</text>
+		</g>
+	</g>
+</svg>
